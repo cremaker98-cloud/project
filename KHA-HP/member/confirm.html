@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/common.css" />
+        <link rel="stylesheet" href="../assets/css/kha-style.css" />
+        <link rel="stylesheet" href="../assets/css/kha-mob.css" />
+
+        <script src="../assets/js/all.min.js"></script>
+        <script src="../assets/js/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script src="../assets/js/jquery.waypoints.min.js"></script>
+        <script src="../assets/js/jqCustom.js"></script>
+
+        <title>한국주택협회</title>
+    </head>
+
+    <body class="subBody">
+        <!--s: Header-->
+        <div id="header-placeholder"></div>
+        <!--e: Header-->
+
+        <!--s: sub Visual-->
+        <div class="subVisual pic4">
+            <div>
+                <h2>회원마당</h2>
+                <p>
+                    주택 건설 사업자들이 필요한 행정 업무와<br />
+                    다양한 회원 전용 서비스를 편리하게 이용하세요.
+                </p>
+            </div>
+        </div>
+        <!--e: sub Visual-->
+
+        <!--s: Main-->
+        <main>
+            <section class="subWrap">
+                <!-- s:LNB-->
+                <div id="lnb-member-placeholder"></div>
+                <!-- e:LNB-->
+
+                <!-- s:container-->
+                <section class="container">
+                    <div class="subTitle">
+                        <h3>확인서 발급</h3>
+                        <div id="link-buttons-placeholder"></div>
+                    </div>
+
+                    <!-- s: content-->
+                    <section class="content">
+                        <div class="tab-container">
+                            <!-- 탭 버튼 영역 -->
+                            <ul class="tab-list">
+                                <!-- HTML 수정: active 클래스를 <li> 태그에 적용 -->
+                                <li class="active"><a href="#" class="tab-button" data-tab="tab1">탭 1</a></li>
+                                <li><a href="#" class="tab-button" data-tab="tab2">탭 2</a></li>
+                                <li><a href="#" class="tab-button" data-tab="tab3">탭 3</a></li>
+                            </ul>
+
+                            <!-- 탭 내용 영역 -->
+                            <div class="tab-content-container">
+                                <!-- id 속성을 추가하여 버튼과 연결합니다 -->
+                                <div id="tab1" class="tab-content active">
+                                    <h3>탭 1 내용</h3>
+                                    <p>여기는 첫 번째 탭의 내용입니다. 기본적으로 이 내용이 보여집니다.</p>
+                                    <ul>
+                                        <li>첫 번째 탭만의 데이터</li>
+                                    </ul>
+                                </div>
+                                <div id="tab2" class="tab-content">
+                                    <h3>탭 2 내용</h3>
+                                    <p>두 번째 탭이 클릭되었을 때 나타나는 정보입니다.</p>
+                                </div>
+                                <div id="tab3" class="tab-content">
+                                    <h3>탭 3 내용</h3>
+                                    <p>세 번째 탭의 상세 내용입니다. 필요한 HTML 마크업을 자유롭게 추가하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                // 버튼 요소(a 태그)를 가져옵니다.
+                                const tabButtons = document.querySelectorAll(".tab-button");
+                                const tabContents = document.querySelectorAll(".tab-content");
+
+                                tabButtons.forEach((button) => {
+                                    button.addEventListener("click", (e) => {
+                                        // 기본 링크 이동 방지
+                                        e.preventDefault();
+
+                                        const tabId = button.dataset.tab;
+                                        // 클릭된 <a> 태그의 부모 (<li> 태그)를 찾습니다.
+                                        const parentListItem = button.parentNode;
+
+                                        // 1. 모든 버튼의 부모(li)에서 'active' 클래스 제거
+                                        tabButtons.forEach((btn) => btn.parentNode.classList.remove("active"));
+
+                                        // 2. 클릭된 버튼의 부모(li)에 'active' 클래스 추가
+                                        parentListItem.classList.add("active");
+
+                                        // 3. 모든 내용(content)을 숨김
+                                        tabContents.forEach((content) => content.classList.remove("active"));
+
+                                        // 4. 클릭된 버튼과 연결된 내용만 표시
+                                        const targetContent = document.getElementById(tabId);
+                                        if (targetContent) {
+                                            targetContent.classList.add("active");
+                                        } else {
+                                            console.error("해당 ID의 탭 내용을 찾을 수 없습니다:", tabId);
+                                        }
+                                    });
+                                });
+
+                                // 페이지 로드 시 첫 번째 탭을 강제 활성화 (선택 사항)
+                                // if (tabButtons.length > 0) {
+                                //     tabButtons[0].click();
+                                // }
+                            });
+                        </script>
+                    </section>
+                    <!-- e: content-->
+                </section>
+                <!-- e:container-->
+            </section>
+        </main>
+        <!--e: Main-->
+
+        <!--s: Footer-->
+        <div id="footer-placeholder"></div>
+        <!--e: Footer-->
+
+        <script src="../assets/js/jqCustom-menu.js"></script>
+    </body>
+</html>

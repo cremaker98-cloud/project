@@ -1,0 +1,763 @@
+@charset "UTF-8";
+
+/**Sub GNB**/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    transition: 0.3s;
+}
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+header a {
+    color: #333;
+}
+.toggleBtn {
+    display: none;
+}
+
+.mainMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+.mainMenu .gnbMenu {
+    display: flex;
+    z-index: 1;
+}
+.mainMenu .gnbMenu > li > a {
+    position: relative;
+    display: block;
+    font-size: var(--mdbig-font);
+    font-weight: 600;
+    padding: 30px 40px;
+}
+.mainMenu .gnbMenu > li > a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -1px;
+    height: 3px;
+    background-color: var(--menu-color);
+    z-index: 2;
+    transition: 0.3s;
+}
+.mainMenu .gnbMenu > li.on > a,
+.mainMenu .gnbMenu > li:hover > a {
+    color: var(--menu-color);
+}
+.mainMenu .gnbMenu > li.on > a:after,
+.mainMenu .gnbMenu > li:hover > a:after {
+    left: 0;
+    right: 0;
+}
+
+.mainMenu .gnbMenu > li .subMenu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #fff url(../img/bg-gnb.png) repeat-y top center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
+.mainMenu .gnbMenu > li:hover .subMenu {
+    height: 210px;
+    border-top: 1px solid #e1e1e1;
+}
+.mainMenu .gnbMenu > li:hover .subMenu {
+    height: 210px;
+}
+.mainMenu .gnbMenu > li:hover .subMenu.sub1 {
+    height: 210px;
+}
+.mainMenu .gnbMenu > li:hover .subMenu.sub2 {
+    height: 270px;
+}
+.mainMenu .gnbMenu > li:hover .subMenu.sub3 {
+    height: 315px;
+}
+.mainMenu .gnbMenu > li:hover .subMenu.sub4 {
+    height: 449px;
+}
+.mainMenu .gnbMenu > li:hover .subMenu.sub5 {
+    height: 360px;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner {
+    display: flex;
+    width: 1420px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 2;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > h3 {
+    width: 300px;
+    height: 100%;
+    font-size: 30px;
+    color: #414141;
+    padding-top: 26px;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > h3 > p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 8px;
+}
+.mainMenu .gnbMenu > li .subMenu.sub1 .submenu-inner > h3 {
+    background: #ebecf5 url(../img/img-top-notice.png) no-repeat left bottom;
+}
+.mainMenu .gnbMenu > li .subMenu.sub2 .submenu-inner > h3 {
+    background: #ebecf5 url(../img/img-top-sale.png) no-repeat left bottom;
+}
+.mainMenu .gnbMenu > li .subMenu.sub3 .submenu-inner > h3 {
+    background: #ebecf5 url(../img/img-top-info.png) no-repeat left bottom;
+}
+.mainMenu .gnbMenu > li .subMenu.sub4 .submenu-inner > h3 {
+    background: #ebecf5 url(../img/img-top-member.png) no-repeat left bottom;
+}
+.mainMenu .gnbMenu > li .subMenu.sub5 .submenu-inner > h3 {
+    background: #ebecf5 url(../img/img-top-about.png) no-repeat left bottom;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > ul {
+    display: flex;
+    gap: 14px;
+    flex: 1;
+    height: 100%;
+    background-color: #fff;
+    padding: 30px 0 30px 30px;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > ul > li {
+    width: 170px;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > ul > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    height: 60px;
+    background-color: #f4f5fa;
+    border-radius: 6px;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > ul > li > ul {
+    margin-top: 5px;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > ul > li > ul > li > a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: var(--small-font);
+    font-weight: 600;
+    color: #414141;
+    min-height: 45px;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0 8px 14px;
+}
+.mainMenu .gnbMenu > li .subMenu .submenu-inner > ul > li > ul > li > a::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+/** e: sub gnb**/
+
+.mainMenu .m-utilBox {
+    display: none;
+}
+.mainMenu .utilBox > ul {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.mainMenu .utilBox > ul > li {
+    font-weight: 500;
+    border-right: 1px solid #ccc;
+}
+.mainMenu .utilBox > ul > li:last-child {
+    border: none;
+}
+.mainMenu .utilBox > ul > li > a {
+    display: block;
+    line-height: 16px;
+    padding: 0 12px;
+}
+
+.searchBtn {
+    cursor: pointer;
+}
+#dropdownMenu {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #fff;
+    padding: 40px 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+#dropdownMenu.show {
+    opacity: 1;
+    min-height: 250px;
+}
+.searchArea {
+    position: relative;
+    width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+.searchArea .scForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #3268f0;
+    border-radius: 80px;
+    font-size: 20px;
+    padding: 1px 24px;
+}
+.searchArea .scForm input {
+    width: 100%;
+    line-height: 60px;
+    border: none;
+}
+.searchArea input::placeholder {
+    font-size: var(--mdbig-font);
+}
+.searchArea .key {
+    padding: 20px 0;
+    text-align: left;
+}
+.searchArea .key span {
+    display: inline-block;
+    font-size: var(--default-font);
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 4px 12px;
+    margin: 5px;
+}
+
+/**Sub LNB**/
+ul.lnb {
+    width: 260px;
+}
+ul.lnb > li {
+    padding: 0 0 10px 0;
+}
+ul.lnb > li > a {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+ul.lnb > li:hover > a {
+    background-color: #f7f7f7;
+}
+ul.lnb > li.active > a {
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--menu-color);
+    border-color: var(--menu-color);
+}
+ul.lnb > li > ul.lnb-submenu {
+    font-size: 15px;
+    padding: 10px 0 0 20px;
+}
+ul.lnb > li > ul.lnb-submenu > li > a {
+    display: block;
+    position: relative;
+    padding: 0 0 10px 8px;
+    transition: 0.3s;
+}
+ul.lnb > li > ul.lnb-submenu > li > a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 2px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #333;
+}
+ul.lnb > li > ul.lnb-submenu > li:hover > a {
+    color: var(--menu-color);
+}
+ul.lnb > li > ul.lnb-submenu > li.active > a {
+    color: var(--menu-color);
+    font-weight: 600;
+}
+ul.lnb > li > ul.lnb-submenu > li.active > a::before {
+    background-color: var(--menu-color);
+}
+
+/*footer*/
+footer {
+    background-color: #212430;
+}
+.footer-inner {
+    font-size: var(--default-font);
+    color: #eee;
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+.footer-inner .footerLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-inner .footerLink > ul {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+.footer-inner .footerLink > ul > li {
+    position: relative;
+    padding: 0 14px;
+}
+.footer-inner .footerLink > ul > li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.footer-inner .footerLink > ul > li:first-child {
+    padding-left: 0;
+}
+.footer-inner .footerLink > ul > li:first-child::before {
+    display: none;
+}
+.footer-inner .footerInfo {
+    text-align: center;
+    padding: 30px 0;
+}
+.footer-inner .footerInfo p.logo {
+    padding-bottom: 20px;
+}
+.footer-inner .footerInfo p.copy {
+    color: #999;
+    margin-top: 5px;
+}
+.footer-inner .footerInfo p span {
+    display: inline-block;
+    line-height: 1rem;
+    padding: 0 14px;
+    margin: 0 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-inner select {
+    color: #fff;
+    line-height: 38px;
+    background: #212430 url(../img/btn-select-w-down.svg) no-repeat right 14px center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+}
+
+/* Total search Tab */
+.totalSearch {
+    display: flex;
+    margin-bottom: 30px;
+}
+.totalSearch input[type="text"] {
+    width: 100%;
+    line-height: 56px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 0 8px 0 14px;
+}
+.totalSearch p {
+    display: flex;
+}
+.totalSearch p.textbox {
+    flex: 1;
+}
+.totalSearch p.btnbox > span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #eef0f4;
+    min-width: 110px;
+    border-radius: 8px;
+    padding: 0 15px;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+.totalSearch p.btnbox > span:hover {
+    background-color: #e7e7e7;
+}
+.totalSearch p.btnbox > span > label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    padding: 0 0 0 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.tab-container {
+    width: 100%;
+    max-width: 1390px;
+}
+.tab-header-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #f5f5f5;
+    /*border: 1px solid #e5e5e5;*/
+    border-radius: 8px;
+}
+/* 실제 스크롤이 발생하는 영역 (넘치는 부분 숨김) */
+.tab-scroll-area {
+    flex-grow: 1; /* 남은 공간을 모두 차지 */
+    overflow-x: auto; /* 가로 스크롤 허용 */
+    -ms-overflow-style: none; /* IE, Edge 숨김 */
+    scrollbar-width: none; /* Firefox 숨김 */
+}
+/* 스크롤바 숨기기 (Chrome, Safari) */
+.tab-scroll-area::-webkit-scrollbar {
+    display: none;
+}
+.tab-container {
+    margin-bottom: 20px;
+}
+.tab-list {
+    display: flex;
+}
+.tab-list > li {
+    flex-shrink: 0;
+    position: relative;
+    height: 70px;
+}
+.tab-list > li > a {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 100%;
+    padding: 0 24px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+.tab-list > li:hover > a {
+    color: #3268f0;
+}
+.tab-list > li.active > a,
+.tab-list > li.active:hover > a {
+    color: #fff;
+    font-weight: 600;
+    background-color: #3268f0;
+    border: 1px solid #3268f0;
+}
+.tab-list > li::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 0;
+    width: 1px;
+    height: 16px;
+    background-color: #ddd;
+}
+.tab-list > li.active::before,
+.tab-list > li:last-child::before {
+    display: none;
+}
+.tab-list a span,
+.tab-content h3 > span {
+    display: inline-block;
+    min-width: 20px;
+    color: #333;
+    font-size: var(--default-font);
+    text-align: center;
+    font-weight: 400;
+    background-color: #e4e5eb;
+    border: 1px solid #d3d6df;
+    border-radius: 10px;
+    padding: 1px 4px 1px 3px;
+    margin-left: 4px;
+}
+.tab-list > li.active span {
+    color: #3268f0;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    color: #333;
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.nav-button > img {
+    height: 10px;
+}
+.nav-button.left {
+    left: 5px;
+    box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.1);
+}
+.nav-button.right {
+    right: 5px;
+    box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.1);
+}
+.nav-button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+.tab-content-container {
+    padding: 40px 0 0 0;
+    background-color: #fff;
+}
+.nav-button:disabled {
+    opacity: 0; /* 투명도를 0으로 설정하여 완전히 숨김 */
+    cursor: default;
+    pointer-events: none; /* 마우스 클릭 이벤트를 완전히 비활성화 */
+}
+
+.tab-content {
+    background-color: #fff;
+    margin-bottom: 20px;
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.tab-content .result {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.tab-content .title-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    padding: 20px 30px;
+}
+.tab-content .title-category h3 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+.tab-content .title-category a {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 10px;
+    transition: 0.3s;
+}
+.tab-content .title-category a::after {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url(../img/icon-plus-more.svg) no-repeat center center;
+    margin: 0 0 0 4px;
+}
+.tab-content .cont-detail {
+    padding: 0 40px;
+}
+.tab-content .cont-detail > a {
+    display: block;
+}
+.tab-content .cont-detail > a:hover {
+    text-decoration: underline;
+}
+.tab-content .cont-detail dl {
+    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+}
+.tab-content .cont-detail > a:last-child dl {
+    border-bottom: none;
+}
+.tab-content .cont-detail dl dt {
+    font-size: var(--mdbig-font);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.tab-content .cont-detail dl dt > span {
+    display: inline-block;
+    font-size: var(--default-font);
+    font-weight: 500;
+    color: #777;
+    line-height: var(--default-font);
+    border-left: 1px solid #ddd;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.tab-content .cont-detail dl dd p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 6px;
+}
+.tab-content .cont-detail dl dd .addFile {
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+}
+.tab-content .cont-detail a:hover dl dd .addFile {
+    border: 1px solid #777;
+}
+.tab-content .cont-detail dl strong {
+    display: inline-block;
+    font-weight: inherit;
+    background-color: #ffe342;
+    padding-top: 1px;
+}
+/* e: Total search Tab */
+
+/* Login */
+.loginWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginWrap h3 {
+    font-size: var(--big-font);
+    margin-bottom: 30px;
+}
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    display: block;
+    line-height: 70px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 14px;
+    margin: 16px 0;
+}
+.login-box .btn-login {
+    display: block;
+    width: 100%;
+    font-size: var(--mdbig-font);
+    color: #fff;
+    line-height: 70px;
+    text-align: center;
+    background: #0078d4;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.login-box .btn-login:hover {
+    background: #0055d4;
+}
+.saveId {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.saveId input[type="checkbox"] {
+    width: 23px;
+    height: 23px;
+    border-radius: 15px !important;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/* e: Login */
+
+/**/
+.eclip {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.m-top-btn {
+    display: none;
+}
+.m-hidden {
+    display: none;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexfull {
+    flex: 1;
+}
+.mgt {
+    margin-top: 6px;
+}
+.mgt10 {
+    margin-top: 10px;
+}
+.mgbt10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mgAll {
+    margin: 6px;
+}
+
+.basicFont {
+    font-size: var(--basic-font);
+}
+
+.taLeft {
+    text-align: left !important;
+}
+.taCenter {
+    text-align: center !important;
+}

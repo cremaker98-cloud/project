@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>한국주택협회</title>
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/jqCustom.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/kha-main.css" />
+    </head>
+    <style>
+        .typing_text {
+            display: inline-block;
+            font-size: 80px;
+            font-weight: 600;
+            border-right: 3px solid #fff;
+            /* 'typing' 애니메이션만 사용 */
+            animation: typing 6s steps(27) forwards;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .lottie-container {
+            /* Lottie 컨테이너 초기 상태를 투명하게 설정 */
+            opacity: 0;
+            transition: opacity 1s ease-in-out; /* 부드러운 페이드인 효과 */
+        }
+
+        .lottie-container.show {
+            opacity: 1;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+                opacity: 1; /* 글자는 처음부터 보입니다. */
+                border-color: #fff;
+            }
+            40% {
+                width: 1034px;
+                opacity: 1; /* 타이핑이 진행되는 동안 글자는 선명하게 보입니다. */
+                border-color: #fff;
+            }
+            90% {
+                width: 1034px;
+                opacity: 1;
+                border-color: transparent; /* 타이핑 완료 후 커서가 사라집니다. */
+            }
+            100% {
+                width: 1034px;
+                opacity: 0; /* 마지막에 글자가 투명해지면서 사라집니다. */
+            }
+        }
+        .bx-wrapper {
+            width: 1590px !important;
+            padding: 0 !important;
+            margin: 0 auto;
+        }
+        .bx-viewport {
+            width: 1390px !important;
+            margin: 0 auto;
+        }
+    </style>
+    <body>
+        <header>
+            <nav class="mainMenu">
+                <div class="logo-menubtn">
+                    <h1>
+                        <a href="#" class="flexCenter">
+                            <img src="assets/img/logo-b.png" class="normal" />
+                            <img src="assets/img/logo-w.png" class="over" />
+                        </a>
+                    </h1>
+                    <div class="m-top-btn">
+                        <a href="#" class="searchBtn"><img src="assets/img/btn-m-search-b.svg" alt="search button" /></a>
+                        <a href="#" class="toggleBtn">
+                            <img src="assets/img/btn-m-menu-b.png" alt="menu" />
+                        </a>
+                    </div>
+                </div>
+                <ul class="gnbMenu">
+                    <li>
+                        <div class="m-utilBox">
+                            <ul>
+                                <li><a href="#">주택인재개발원</a></li>
+                                <li><a href="#">인터넷증명서발급</a></li>
+                                <li>
+                                    <a href="#"><img src="assets/img/icon-lang.svg" alt="" /> EN</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="menuClose"><img src="assets/img/m-btn-close.svg" alt="close" /></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="notice/newsList.html">알림마당</a>
+                        <div class="subMenu sub1">
+                            <div class="submenu-inner">
+                                <h3>
+                                    알림마당
+                                    <p>
+                                        부동산 시장의 최신 동향과 협회 및 회원사의<br />
+                                        소식을 가장 빠르게 전달하는 창구입니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li><a href="notice/newsList.html">부동산 뉴스</a></li>
+                                    <li><a href="notice/noticeList.html">공지사항</a></li>
+                                    <li><a href="notice/pressList.html">보도자료</a></li>
+                                    <li><a href="notice/gallery.html">협회 및 회원사 동정</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="sale/schedule.html">분양정보</a>
+                        <div class="subMenu sub2">
+                            <div class="submenu-inner">
+                                <h3>
+                                    분양정보
+                                    <p>
+                                        전국의 주요 주택 분양 및 입주 계획을<br />
+                                        한눈에 파악할 수 있는 종합 정보 공간입니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li><a href="sale/schedule.html">분양일정</a></li>
+                                    <li>
+                                        <a href="sale/saleplan.html">분양계획</a>
+                                        <ul>
+                                            <li><a href="sale/saleplan_month.html">월간</a></li>
+                                            <li><a href="sale/saleplan_year.html">연간</a></li>
+                                            <li><a href="sale/saleplan_half.html">하반기</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="sale/intoplan.html">입주계획</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="info/newlaw.html">정보마당</a>
+                        <div class="subMenu sub3">
+                            <div class="submenu-inner">
+                                <h3>
+                                    정보마당
+                                    <p>
+                                        주택 관련 법률, 통계, 연구 자료 등<br />
+                                        전문적인 정보를 제공하는 지식 허브입니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="info/newlaw.html">법령정보</a>
+                                        <ul>
+                                            <li><a href="info/newlaw.html">최신법령</a></li>
+                                            <li><a href="info/inlagi.html">입법 &middot; 행정예고</a></li>
+                                            <li><a href="info/submit.html">의원발의</a></li>
+                                            <li><a href="info/rule.html">행정규칙(훈령,예규,고시)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="info/housedata.html">주택자료실</a>
+                                        <ul>
+                                            <li><a href="info/housedata.html">주택정책제도</a></li>
+                                            <li><a href="info/seminar.html">세미나,토론회</a></li>
+                                            <li><a href="info/research.html">연구보고서</a></li>
+                                            <li><a href="info/etc.html">기타</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="info/stats.html">주택통계정보</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="member/bizreg.html">회원마당</a>
+                        <div class="subMenu sub4">
+                            <div class="submenu-inner">
+                                <h3>
+                                    회원마당
+                                    <p>
+                                        주택 건설 사업자들이 필요한 행정 업무와<br />
+                                        다양한 회원 전용 서비스를 편리하게 이용하세요.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="member/bizreg.html">주택건설사업등록</a>
+                                    </li>
+                                    <li>
+                                        <a href="member/report.html">등록사항 변경 신고</a>
+                                    </li>
+                                    <li>
+                                        <a href="member/expert.html">영업실적 등 제출</a>
+                                        <ul>
+                                            <li><a href="member/expert.html">영업실적,영업계획 및 기술자보유현황</a></li>
+                                            <li><a href="member/result.html">월별 주택분양계획 및 분양실적</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="member/confirm.html">확인서 발급</a>
+                                    </li>
+                                    <li>
+                                        <a href="member/pf.html">신고센터</a>
+                                        <ul>
+                                            <li><a href="member/pf.html">PF 애로 신고센터</a></li>
+                                            <li><a href="member/illegal.html">불법행위 신고센터</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="member/fee.html">회원게시판</a>
+                                        <ul>
+                                            <li><a href="member/fee.html">회비조회</a></li>
+                                            <li><a href="member/news.html">협회소식</a></li>
+                                            <li><a href="member/bulletin.html">주택회보</a></li>
+                                            <li><a href="member/meeting.html">회의자료</a></li>
+                                            <li><a href="member/helper.html">업무도우미 창구</a></li>
+                                            <li><a href="member/pfcenter.html">PF애로 신고센터</a></li>
+                                            <li><a href="member/illegalcenter.html">불법행위 신고센터</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="about/greeting.html">협회소개</a>
+                        <div class="subMenu sub5">
+                            <div class="submenu-inner">
+                                <h3>
+                                    협회소개
+                                    <p>
+                                        한국주택협회의 역할, 조직, 역사 등<br />
+                                        협회에 대한 전반적인 내용을 소개합니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="about/greeting.html">인사말</a>
+                                    </li>
+                                    <li>
+                                        <a href="about/org.html">조직 및 구성</a>
+                                        <ul>
+                                            <li><a href="about/org.html">조직도</a></li>
+                                            <li><a href="about/director.html">이사회</a></li>
+                                            <li><a href="about/div.html">부서별 업무&middot;직원안내</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="about/aim.html">협회안내</a>
+                                        <ul>
+                                            <li><a href="about/aim.html">설립목적</a></li>
+                                            <li><a href="about/history.html">연혁</a></li>
+                                            <li><a href="about/ci.html">CI 소개</a></li>
+                                            <li><a href="about/members.html">회원현황</a></li>
+                                            <li><a href="about/joininfo.html">회원가입 안내</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="about/location.html">오시는 길</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="utilBox">
+                    <ul>
+                        <li><a href="#">주택인재개발원</a></li>
+                        <li><a href="#">인터넷증명서발급</a></li>
+                        <li>
+                            <a href="#" class="flexCenter">
+                                <img src="assets/img/icon-lang-w.svg" class="normal" alt="en" />
+                                <img src="assets/img/icon-lang-b.svg" class="over" alt="en" /> <span>EN</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="searchBtn"><img src="assets/img/btn-top-search-w.svg" class="normal" alt="search button" /><img src="assets/img/btn-top-search-b.svg" class="over" alt="search button" /></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="dropdownMenu">
+                    <div class="searchArea">
+                        <div class="scForm">
+                            <input type="text" placeholder="검색어를 입력하세요." />
+                            <a href="#" class="icon-search flexCenter"><img src="assets/img/icon-searh.png" /></a>
+                        </div>
+
+                        <div class="key"><span>추천키워드</span><span>분양캘린더</span><span>주택통계정보</span><span>법령정보</span><span>최신법령</span><span>한국주택협회 키워드</span><span>분양계획</span><span>증명서 발급</span><span>9월 분양계획</span></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- s: 동영상영역 -->
+        <section class="mainVideo">
+            <span class="dim"></span>
+            <video autoplay muted loop id="myVideo">
+                <source src="assets/img/video.mp4" type="video/mp4" />
+            </video>
+            <div class="text">
+                <p class="typing_text">Better Housing, Better Life</p>
+
+                <script>
+                    const typingText = document.querySelector(".typing_text");
+                    const lottieContainer = document.querySelector(".lottie-container");
+                    const lottiePlayer = document.getElementById("lottie-animation");
+
+                    // 전체 애니메이션 시간 (5000ms) - Lottie 시작 오버랩 시간(1000ms)
+                    const lottieStartTime = 5000 - 1000;
+
+                    // setTimeout을 사용하여 특정 시간 후 Lottie 애니메이션을 시작
+                    setTimeout(() => {
+                        // Lottie 컨테이너를 보이게 함
+                        lottieContainer.classList.add("show");
+                        // Lottie 애니메이션 재생
+                        lottiePlayer.play();
+                    }, lottieStartTime);
+                </script>
+            </div>
+        </section>
+        <!-- e: 동영상영역 -->
+
+        <!-- s: 링크영역-2 -->
+        <section class="multiLink">
+            <div class="multibg">
+                <div class="title">
+                    <h3>자주 찾는 서비스</h3>
+                    <p style="font-size: 26px; color: #777">주요 서비스들을 빠르고 쉽게 이용하세요.</p>
+                </div>
+                <div class="boxs">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div id="step1" class="box-inner">
+                                    <h4>분양계획</h4>
+                                    <p>월별 주택 분양 계획과 실적 자료를 확인하세요.</p>
+                                    <span><img src="assets/img/icon-1.png" class="block" /><img src="assets/img/icon-1-on.png" class="on" /></span>
+                                    <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div id="step2" class="box-inner">
+                                    <h4>분양캘린더</h4>
+                                    <p>전국 분양, 청약, 입주 일정을 간편하게 확인하세요.</p>
+                                    <span><img src="assets/img/icon-2.png" class="block" /><img src="assets/img/icon-2-on.png" class="on" /></span>
+                                    <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div id="step3" class="box-inner">
+                                    <h4>주택통계정보</h4>
+                                    <p>최신 주택 시장 통계를 제공하여 시장 동향을 파악할 수 있습니다.</p>
+                                    <span><img src="assets/img/icon-3.png" class="block" /><img src="assets/img/icon-3-on.png" class="on" /></span>
+                                    <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div id="step4" class="box-inner">
+                                    <h4>법령정보</h4>
+                                    <p>주택 관련 법령과 규정을 쉽고 빠르게 찾아볼 수 있습니다.</p>
+                                    <span><img src="assets/img/icon-4.png" class="block" /><img src="assets/img/icon-4-on.png" class="on" /></span>
+                                    <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div id="step5" class="box-inner">
+                                    <h4>증명서발급</h4>
+                                    <p>각종 증명서 발급 신청을 간편하게 처리하세요.</p>
+                                    <span><img src="assets/img/icon-5.png" class="block" /><img src="assets/img/icon-5-on.png" class="on" /></span>
+                                    <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- e: 링크영역-2 -->
+
+        <!-- s: 링크영역-1 -->
+        <section class="mainLink">
+            <div class="edu">
+                <div class="inner">
+                    <img src="assets/img/img-cal.png" />
+                </div>
+            </div>
+
+            <div class="research">
+                <div class="inner">
+                    <img src="assets/img/img-banner.png" />
+                </div>
+            </div>
+        </section>
+        <!-- e: 링크영역-1 -->
+
+        <!-- s: 동영상강의 -->
+        <section class="videoArea">
+            <div class="slide_tab2">
+                <ul class="video-tab">
+                    <li><a href="#tab-1">부동산 뉴스</a></li>
+                    <li><a href="#tab-2">공지사항</a></li>
+                    <li><a href="#tab-3">보도자료</a></li>
+                </ul>
+                <div id="tab-1">
+                    <h4>부동산 뉴스</h4>
+                    <ul class="tabMulti_slide">
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/news-sp.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/news-sp2.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/news-sp3.png" />
+                                    </div>
+                                    <p><a href="#">dd</a></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/news-sp4.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tab-2">
+                    <h4>공지사항</h4>
+                    <ul class="tabMulti_slide">
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/notice-sp.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/notice-sp2.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/notice-sp3.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/notice-sp4.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tab-3">
+                    <h4>보도자료</h4>
+                    <ul class="tabMulti_slide">
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/data-sp.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/data-sp2.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/data-sp3.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="slide-box">
+                                    <div class="blurBox">
+                                        <img src="assets/img/data-sp4.png" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- e: 동영상강의 -->
+
+        <section>
+            <div style="text-align: center; padding: 90px 0; background: #f9f9f9">
+                <img src="assets/img/bottom-plus.png" />
+            </div>
+        </section>
+
+        <footer>
+            <div style="text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.3)">
+                <img src="assets/img/footer-link.png" />
+            </div>
+            <div style="text-align: center; padding: 40px 0">
+                <img src="assets/img/footer.png" />
+            </div>
+        </footer>
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            if (!dropdownMenu) return; // dropdownMenu가 없으면 로직 실행 안함
+
+            const clickedSearchBtn = event.target.closest(".searchBtn");
+
+            if (clickedSearchBtn) {
+                dropdownMenu.classList.toggle("show");
+                event.stopPropagation();
+            } else if (dropdownMenu.classList.contains("show")) {
+                if (!dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove("show");
+                }
+            }
+        });
+    </script>
+</html>
+<!-- **end:include -->

@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>주택협회-메인</title>
+        <!-- Tailwind CSS CDN을 제거하고, 모든 스타일을 직접 작성했습니다. -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/jqCustom.js"></script>
+    </head>
+    <body>
+        <!-- ========== 고정 내비게이션 바 (Sticky Header) ========== -->
+        <header>
+            <nav class="mainMenu">
+                <div class="logo-menubtn">
+                    <h1>
+                        <a href="#" class="flexCenter">
+                            <img src="assets/img/logo-b.png" class="normal" />
+                            <img src="assets/img/logo-w.png" class="over" />
+                        </a>
+                    </h1>
+                    <div class="m-top-btn">
+                        <a href="#" class="searchBtn"><img src="assets/img/btn-m-search-b.svg" alt="search button" /></a>
+                        <a href="#" class="toggleBtn">
+                            <img src="assets/img/btn-m-menu-b.png" alt="menu" />
+                        </a>
+                    </div>
+                </div>
+                <ul class="gnbMenu">
+                    <li>
+                        <div class="m-utilBox">
+                            <ul>
+                                <li><a href="#">주택인재개발원</a></li>
+                                <li><a href="#">인터넷증명서발급</a></li>
+                                <li>
+                                    <a href="#"><img src="assets/img/icon-lang.svg" alt="" /> EN</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="menuClose"><img src="assets/img/m-btn-close.svg" alt="close" /></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="notice/newsList.html">알림마당</a>
+                        <div class="subMenu sub1">
+                            <div class="submenu-inner">
+                                <h3>
+                                    알림마당
+                                    <p>
+                                        부동산 시장의 최신 동향과 협회 및 회원사의<br />
+                                        소식을 가장 빠르게 전달하는 창구입니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li><a href="notice/newsList.html">부동산 뉴스</a></li>
+                                    <li><a href="notice/noticeList.html">공지사항</a></li>
+                                    <li><a href="notice/pressList.html">보도자료</a></li>
+                                    <li><a href="notice/gallery.html">협회 및 회원사 동정</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="sale/schedule.html">분양정보</a>
+                        <div class="subMenu sub2">
+                            <div class="submenu-inner">
+                                <h3>
+                                    분양정보
+                                    <p>
+                                        전국의 주요 주택 분양 및 입주 계획을<br />
+                                        한눈에 파악할 수 있는 종합 정보 공간입니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li><a href="sale/schedule.html">분양일정</a></li>
+                                    <li>
+                                        <a href="sale/saleplan.html">분양계획</a>
+                                        <ul>
+                                            <li><a href="sale/saleplan_month.html">월간</a></li>
+                                            <li><a href="sale/saleplan_year.html">연간</a></li>
+                                            <li><a href="sale/saleplan_half.html">하반기</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="sale/intoplan.html">입주계획</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="info/newlaw.html">정보마당</a>
+                        <div class="subMenu sub3">
+                            <div class="submenu-inner">
+                                <h3>
+                                    정보마당
+                                    <p>
+                                        주택 관련 법률, 통계, 연구 자료 등<br />
+                                        전문적인 정보를 제공하는 지식 허브입니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="info/newlaw.html">법령정보</a>
+                                        <ul>
+                                            <li><a href="info/newlaw.html">최신법령</a></li>
+                                            <li><a href="info/inlagi.html">입법 &middot; 행정예고</a></li>
+                                            <li><a href="info/submit.html">의원발의</a></li>
+                                            <li><a href="info/rule.html">행정규칙(훈령,예규,고시)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="info/housedata.html">주택자료실</a>
+                                        <ul>
+                                            <li><a href="info/housedata.html">주택정책제도</a></li>
+                                            <li><a href="info/seminar.html">세미나,토론회</a></li>
+                                            <li><a href="info/research.html">연구보고서</a></li>
+                                            <li><a href="info/etc.html">기타</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="info/stats.html">주택통계정보</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="member/bizreg.html">회원마당</a>
+                        <div class="subMenu sub4">
+                            <div class="submenu-inner">
+                                <h3>
+                                    회원마당
+                                    <p>
+                                        주택 건설 사업자들이 필요한 행정 업무와<br />
+                                        다양한 회원 전용 서비스를 편리하게 이용하세요.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="member/bizreg.html">주택건설사업등록</a>
+                                    </li>
+                                    <li>
+                                        <a href="member/report.html">등록사항 변경 신고</a>
+                                    </li>
+                                    <li>
+                                        <a href="member/expert.html">영업실적 등 제출</a>
+                                        <ul>
+                                            <li><a href="member/expert.html">영업실적,영업계획 및 기술자보유현황</a></li>
+                                            <li><a href="member/result.html">월별 주택분양계획 및 분양실적</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="member/confirm.html">확인서 발급</a>
+                                    </li>
+                                    <li>
+                                        <a href="member/pf.html">신고센터</a>
+                                        <ul>
+                                            <li><a href="member/pf.html">PF 애로 신고센터</a></li>
+                                            <li><a href="member/illegal.html">불법행위 신고센터</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="member/fee.html">회원게시판</a>
+                                        <ul>
+                                            <li><a href="member/fee.html">회비조회</a></li>
+                                            <li><a href="member/news.html">협회소식</a></li>
+                                            <li><a href="member/bulletin.html">주택회보</a></li>
+                                            <li><a href="member/meeting.html">회의자료</a></li>
+                                            <li><a href="member/helper.html">업무도우미 창구</a></li>
+                                            <li><a href="member/pfcenter.html">PF애로 신고센터</a></li>
+                                            <li><a href="member/illegalcenter.html">불법행위 신고센터</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="about/greeting.html">협회소개</a>
+                        <div class="subMenu sub5">
+                            <div class="submenu-inner">
+                                <h3>
+                                    협회소개
+                                    <p>
+                                        한국주택협회의 역할, 조직, 역사 등<br />
+                                        협회에 대한 전반적인 내용을 소개합니다.
+                                    </p>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="about/greeting.html">인사말</a>
+                                    </li>
+                                    <li>
+                                        <a href="about/org.html">조직 및 구성</a>
+                                        <ul>
+                                            <li><a href="about/org.html">조직도</a></li>
+                                            <li><a href="about/director.html">이사회</a></li>
+                                            <li><a href="about/div.html">부서별 업무&middot;직원안내</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="about/aim.html">협회안내</a>
+                                        <ul>
+                                            <li><a href="about/aim.html">설립목적</a></li>
+                                            <li><a href="about/history.html">연혁</a></li>
+                                            <li><a href="about/ci.html">CI 소개</a></li>
+                                            <li><a href="about/members.html">회원현황</a></li>
+                                            <li><a href="about/joininfo.html">회원가입 안내</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="about/location.html">오시는 길</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="utilBox">
+                    <ul>
+                        <li><a href="#">주택인재개발원</a></li>
+                        <li><a href="#">인터넷증명서발급</a></li>
+                        <li>
+                            <a href="#" class="flexCenter">
+                                <img src="assets/img/icon-lang-w.svg" class="normal" alt="en" />
+                                <img src="assets/img/icon-lang-b.svg" class="over" alt="en" /> <span>EN</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="searchBtn"><img src="assets/img/btn-top-search-w.svg" class="normal" alt="search button" /><img src="assets/img/btn-top-search-b.svg" class="over" alt="search button" /></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="dropdownMenu">
+                    <div class="searchArea">
+                        <div class="scForm">
+                            <input type="text" placeholder="검색어를 입력하세요." />
+                            <a href="#" class="icon-search flexCenter"><img src="assets/img/icon-searh.png" /></a>
+                        </div>
+
+                        <div class="key"><span>추천키워드</span><span>분양캘린더</span><span>주택통계정보</span><span>법령정보</span><span>최신법령</span><span>한국주택협회 키워드</span><span>분양계획</span><span>증명서 발급</span><span>9월 분양계획</span></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- ========== 섹션 1: 풀사이즈 비디오 배경 (Video Placeholder) ========== -->
+        <section id="section-1" class="full-screen mainVideo">
+            <div class="main-text">주택문화를 선도하는<strong>한국주택협회</strong></div>
+            <video autoplay muted loop id="myVideo">
+                <source src="assets/img/video.mp4" type="video/mp4" />
+            </video>
+        </section>
+
+        <!-- ========== 섹션 2: 서비스 소개 ========== -->
+        <section id="section-2">
+            <div class="content-container">
+                <div class="title animate-item">
+                    <h3>자주 찾는 서비스</h3>
+                    <p>가장 많이 이용하는 주요 서비스들을 빠르고 쉽게 이용하세요.</p>
+                </div>
+                <!-- grid-container와 cols-3 클래스 사용 -->
+                <div class="boxs">
+                    <div class="feature-box animate-item">
+                        <a href="#">
+                            <div id="step1" class="box-inner feature-box animate-item">
+                                <h4>분양계획</h4>
+                                <p>월별 주택 분양 계획과 실적 자료를 확인하세요.</p>
+                                <span><img src="assets/img/icon-1.png" class="block" /><img src="assets/img/icon-1-on.png" class="on" /></span>
+                                <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="feature-box animate-item">
+                        <a href="#">
+                            <div id="step2" class="box-inner feature-box animate-item">
+                                <h4>분양캘린더</h4>
+                                <p>전국 분양, 청약, 입주 일정을 간편하게 확인하세요.</p>
+                                <span><img src="assets/img/icon-2.png" class="block" /><img src="assets/img/icon-2-on.png" class="on" /></span>
+                                <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="feature-box animate-item">
+                        <a href="#">
+                            <div id="step3" class="box-inner feature-box animate-item">
+                                <h4>주택통계정보</h4>
+                                <p>최신 주택 시장 통계를 제공하여 시장 동향을 파악할 수 있습니다.</p>
+                                <span><img src="assets/img/icon-3.png" class="block" /><img src="assets/img/icon-3-on.png" class="on" /></span>
+                                <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="feature-box animate-item">
+                        <a href="#">
+                            <div id="step4" class="box-inner feature-box animate-item">
+                                <h4>법령정보</h4>
+                                <p>주택 관련 법령과 규정을 쉽고 빠르게 찾아볼 수 있습니다.</p>
+                                <span><img src="assets/img/icon-4.png" class="block" /><img src="assets/img/icon-4-on.png" class="on" /></span>
+                                <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="feature-box animate-item">
+                        <a href="#">
+                            <div id="step5" class="box-inner feature-box animate-item">
+                                <h4>증명서발급</h4>
+                                <p>각종 증명서 발급 신청을 간편하게 처리하세요.</p>
+                                <span><img src="assets/img/icon-5.png" class="block" /><img src="assets/img/icon-5-on.png" class="on" /></span>
+                                <p class="linkArrow"><img src="assets/img/link-arrow-1.png" class="block" /><img src="assets/img/link-arrow-1-on.png" class="on" /></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 섹션 3========== -->
+        <section id="section-3" class="animate-item newsTabArea">
+            <!-- s: 부동산 뉴스/공지사항/보도자료 -->
+            <!-- 4. 메뉴 탭 & 4개 아이템 슬라이더 -->
+            <div class="container animate-item">
+                <!-- 탭 버튼 컨테이너 -->
+                <div class="tab-controls" id="menuTabs">
+                    <button class="tab-button active" data-tab-target="menuTab1">부동산 뉴스</button>
+                    <button class="tab-button" data-tab-target="menuTab2">공지사항</button>
+                    <button class="tab-button" data-tab-target="menuTab3">보도자료</button>
+                </div>
+
+                <!-- 탭 컨텐츠 컨테이너 -->
+                <div class="tab-content" id="menuTabSlider">
+                    <!-- Tab 1 Panel (부동산 뉴스) -->
+                    <div class="tab-panel menu-tab-panel active" id="menuTab1">
+                        <div class="tab-slider-wrapper">
+                            <div class="tab-slider-container" data-current-step="0">
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">부동산 뉴스</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">부동산 뉴스</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">부동산 뉴스</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">부동산 뉴스</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">부동산 뉴스</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 이전/다음 버튼 -->
+                            <button class="slider-control-button prev-button" aria-label="이전 아이템"><img src="assets/img/slide-left-big-w.svg" alt="이전" /></button>
+                            <button class="slider-control-button next-button" aria-label="다음 아이템"><img src="assets/img/slide-right-big-w.svg" alt="이전" /></button>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2 Panel (공지사항) -->
+                    <div class="tab-panel menu-tab-panel" id="menuTab2">
+                        <div class="tab-slider-wrapper">
+                            <div class="tab-slider-container" data-current-step="0">
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">공지사항</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">공지사항</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">공지사항</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">공지사항</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">공지사항</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 이전/다음 버튼 -->
+                            <button class="slider-control-button prev-button" aria-label="이전 아이템"><img src="assets/img/slide-left-big-w.svg" alt="이전" /></button>
+                            <button class="slider-control-button next-button" aria-label="다음 아이템"><img src="assets/img/slide-right-big-w.svg" alt="이전" /></button>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3 Panel (보도자료) -->
+                    <div class="tab-panel menu-tab-panel" id="menuTab3">
+                        <div class="tab-slider-wrapper">
+                            <div class="tab-slider-container" data-current-step="0">
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">보도자료</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">보도자료</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">보도자료</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="menu-item-slide">
+                                    <a href="#">
+                                        <div class="card">
+                                            <p class="categoy">보도자료</p>
+                                            <div class="title">HUG, '25.8월 미분양관리지역 선정 공고-1</div>
+                                            <div class="date">
+                                                <p>2025.08.01</p>
+                                                <p class="cm-linkArrow"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 이전/다음 버튼 -->
+                                <button class="slider-control-button prev-button" aria-label="이전 아이템"><img src="assets/img/slide-left-big-w.svg" alt="이전" /></button>
+                                <button class="slider-control-button next-button" aria-label="다음 아이템"><img src="assets/img/slide-right-big-w.svg" alt="이전" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 부동산 뉴스 -->
+        </section>
+
+        <!-- ========== 섹션 4: 분양정보/분양통계 ========== -->
+        <section id="section-4">
+            <!-- 분양정보 -->
+            <div class="saleInfo">
+                <div class="animate-item">
+                    <div class="saleTitle">
+                        <h4>금주의 분양정보</h4>
+                        <a href="#"><img src="assets/img/m-arrow-w.svg" /></a>
+                    </div>
+
+                    <div class="detail">
+                        <dl>
+                            <dt>입주자모집정보</dt>
+                            <dd><strong>1,142</strong>건</dd>
+                        </dl>
+                        <dl>
+                            <dt>입주자모집정보</dt>
+                            <dd><strong>1,142</strong>건</dd>
+                        </dl>
+                        <dl>
+                            <dt>입주자모집정보</dt>
+                            <dd><strong>1,142</strong>건</dd>
+                        </dl>
+                        <dl>
+                            <dt>입주자모집정보</dt>
+                            <dd><strong>1,142</strong>건</dd>
+                        </dl>
+                    </div>
+
+                    <div class="scroll">
+                        <ul>
+                            <li>
+                                <strong>청약접수</strong>
+                                힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지 159
+                            </li>
+                            <li>
+                                <strong>청약접수</strong>
+                                힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지 159
+                            </li>
+                            <li>
+                                <strong>청약접수</strong>
+                                힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지 159
+                            </li>
+                            <li>
+                                <strong>청약접수</strong>
+                                힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지 159
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- e:분양정보 -->
+
+            <!-- 분양통계 -->
+            <div class="saleStats">
+                <div class="animate-item">
+                    <div class="saleTitle">
+                        <h4>11월 분양계획 통계</h4>
+                        <a href="#"><img src="assets/img/m-arrow-w.svg" /></a>
+                    </div>
+
+                    <div class="detail">
+                        <dl class="total">
+                            <dt>기준: 입주자 모집 공고일</dt>
+                            <dd><strong>4,939</strong>호</dd>
+                        </dl>
+                        <div class="unit">
+                            <dl>
+                                <dt>자체분양</dt>
+                                <dd><strong>674</strong>호</dd>
+                            </dl>
+                            <dl>
+                                <dt>임대</dt>
+                                <dd><strong>0</strong>호</dd>
+                            </dl>
+                            <dl>
+                                <dt>재개발,재건축 등</dt>
+                                <dd><strong>3,969</strong>호</dd>
+                            </dl>
+                            <dl>
+                                <dt>단순도급</dt>
+                                <dd><strong>569</strong>호</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e:분양통계 -->
+        </section>
+
+        <!-- ========== 섹션 5 ========== -->
+        <section id="section-5">
+            <div class="content-container lawBanner">
+                <!-- 법령정보 외 기타/탭 -->
+                <div class="animate-item">
+                    <div class="container animate-item">
+                        <!-- 탭 버튼 컨테이너 -->
+                        <div class="tab-controls" id="myTabs">
+                            <button class="tab-button active" data-tab-target="tab1">최신법령</button>
+                            <button class="tab-button" data-tab-target="tab2">입법·행정예고</button>
+                            <button class="tab-button" data-tab-target="tab3">의원발의</button>
+                        </div>
+
+                        <!-- 탭 컨텐츠 컨테이너 -->
+                        <div class="tab-content">
+                            <div class="tab-panel active" id="tab1">
+                                <ul class="lawList">
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-panel" id="tab2">
+                                <ul class="lawList">
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-panel" id="tab3">
+                                <ul class="lawList">
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>법률</span>빈집 및 소규모주택 정비에 관한 특례법</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e:법령정보 외 기타/탭 -->
+                <!-- 배너 -->
+                <div class="animate-item">
+                    <div class="container animate-item">
+                        <!-- 슬라이더 래퍼 -->
+                        <div class="slider-wrapper" id="mySlider">
+                            <!-- 슬라이드가 실제 움직이는 컨테이너 -->
+                            <div class="slides-container" id="slidesContainer">
+                                <div class="slide"><img src="assets/img/banner-sample.png" /></div>
+                                <div class="slide">싱글 슬라이드 2</div>
+                                <div class="slide">싱글 슬라이드 3</div>
+                                <div class="slide">싱글 슬라이드 4</div>
+                            </div>
+
+                            <!-- 이전/다음 버튼 -->
+                            <button class="slider-control-button prev-button" id="prevButton" aria-label="이전 슬라이드"><img src="assets/img/slide-left-big-w.svg" alt="이전" /></button>
+                            <button class="slider-control-button next-button" id="nextButton" aria-label="다음 슬라이드"><img src="assets/img/slide-right-big-w.svg" alt="이전" /></button>
+                        </div>
+
+                        <!-- 페이지네이션 (점) -->
+                        <div class="slider-pagination" id="sliderPagination">
+                            <!-- JS로 Dot이 생성됩니다. -->
+                        </div>
+                    </div>
+                </div>
+                <!-- e:배너 -->
+            </div>
+        </section>
+
+        <!-- 섹션 6 -->
+        <section id="section-6">
+            <div class="content-container" style="text-align: center">
+                <div class="title animate-item">
+                    <h3>회원사 현황</h3>
+                    <p>한국주택협회는 전국 <strong>59</strong>개의 회원사와 함께합니다.</p>
+                </div>
+                <div class="animate-item">
+                    <ul class="grid-container">
+                        <li><img src="assets/img/partners/cp-booyang.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-bs.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-daewon.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-daewoo.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-dlCon.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-dlenc.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-dongbu.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-dongmun.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-doosan.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-dragon.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-dsc.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-dw.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-flower.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-gs.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-hana.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-hanhwa.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-hanil.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-hansin.png" alt="" /></li>
+                        <li><img src="assets/img/partners/cp-hdcHyundai.png" alt="" /></li>
+                        <li class="moreBtn">
+                            <a href="#">
+                                <strong>59</strong>
+                                <p>전체 회원사 보기</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-7">
+            <div class="content-container">
+                <div class="linkTitle animate-item">
+                    <h3>협회 및 회원사 동정</h3>
+                    <a href="#"><img src="assets/img/m-arrow-b.svg" alt="more" /></a>
+                </div>
+                <div class="container animate-item">
+                    <!-- 자동 배너 슬라이더 래퍼 -->
+                    <div class="auto-banner-wrapper" id="autoBannerWrapper">
+                        <!-- 슬라이드가 실제 움직이는 컨테이너 -->
+                        <div class="auto-slides-container" id="autoSlidesContainer">
+                            <div class="banner-slide">
+                                <a href="#">
+                                    <dl>
+                                        <dt>
+                                            <p>한국주택협회-KBS한국어진흥원 MOU 체결</p>
+                                            <span>2025.08.12</span>
+                                        </dt>
+                                        <dd><img src="assets/img/m-gallery-sample.png" alt="" /></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="banner-slide">
+                                <a href="#">
+                                    <dl>
+                                        <dt>
+                                            <p>한국주택협회-KBS한국어진흥원 MOU 체결</p>
+                                            <span>2025.08.12</span>
+                                        </dt>
+                                        <dd><img src="assets/img/m-gallery-sample.png" alt="" /></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="banner-slide">
+                                <a href="#">
+                                    <dl>
+                                        <dt>
+                                            <p>한국주택협회-KBS한국어진흥원 MOU 체결</p>
+                                            <span>2025.08.12</span>
+                                        </dt>
+                                        <dd><img src="assets/img/m-gallery-sample.png" alt="" /></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="banner-slide">
+                                <a href="#">
+                                    <dl>
+                                        <dt>
+                                            <p>한국주택협회-KBS한국어진흥원 MOU 체결</p>
+                                            <span>2025.08.12</span>
+                                        </dt>
+                                        <dd><img src="assets/img/m-gallery-sample.png" alt="" /></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 이전/다음 버튼 (새로 추가됨) -->
+                    <button class="slider-control-button prev-button out" id="autoPrevButton" aria-label="이전 배너"><img src="assets/img/slide-left-big.svg" alt="이전" /></button>
+                    <button class="slider-control-button next-button out" id="autoNextButton" aria-label="다음 배너"><img src="assets/img/slide-right-big.svg" alt="다음" /></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-8">
+            <div class="content-container">
+                <!-- 5. 파트너 로고 슬라이더 (자동 순환) -->
+                <div class="container slidePadding animate-item">
+                    <div class="logo-slider-wrapper" id="logoSliderWrapper">
+                        <div class="logo-slides-container" id="logoSlidesContainer">
+                            <!-- 로고 아이템들 (다양한 크기 시뮬레이션) -->
+                            <div class="logo-slide"><img src="assets/img/m-corp/pt-logo-1.png" alt="" /></div>
+                            <div class="logo-slide"><img src="assets/img/m-corp/pt-logo-2.png" alt="" /></div>
+                            <div class="logo-slide"><img src="assets/img/m-corp/pt-logo-3.png" alt="" /></div>
+                            <div class="logo-slide"><img src="assets/img/m-corp/pt-logo-4.png" alt="" /></div>
+                            <div class="logo-slide"><img src="assets/img/m-corp/pt-logo-5.png" alt="" /></div>
+                            <div class="logo-slide"><img src="assets/img/m-corp/pt-logo-6.png" alt="" /></div>
+                        </div>
+                    </div>
+                    <button class="slider-control-button prev-button out" id="logoPrevButton"><img src="assets/img/slide-left.svg" alt="이전" /></button>
+                    <button class="slider-control-button next-button out" id="logoNextButton"><img src="assets/img/slide-right.svg" alt="다음" /></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Footer ========== -->
+        <footer>
+            <div class="footer-inner">
+                <div class="footerLink">
+                    <ul>
+                        <li><a href="#">협회소개</a></li>
+                        <li><a href="#">회원게시판</a></li>
+                        <li><a href="#">회원가입안내</a></li>
+                        <li><a href="#"></a>찾아오시는 길</li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                    <div>
+                        <select>
+                            <option>정부기관</option>
+                            <option>감사원</option>
+                            <option>고용노동부</option>
+                            <option>공정거래위원회</option>
+                            <option>교육부</option>
+                            <option>국방부</option>
+                            <option>국세청</option>
+                            <option>국토교통부</option>
+                            <option>기획재정부</option>
+                            <option>법무부</option>
+                            <option>법제처</option>
+                            <option>보건복지부</option>
+                            <option>정보통신부</option>
+                            <option>조달청</option>
+                            <option>중소기업청</option>
+                            <option>통계청</option>
+                            <option>특허청</option>
+                            <option>행정자치부</option>
+                            <option>환경부</option>
+                        </select>
+                        <select>
+                            <option>관련단체</option>
+                            <option>건설공제조합</option>
+                            <option>건설기술교육원</option>
+                            <option>국민은행</option>
+                            <option>국토교통인재개발원</option>
+                            <option>국토연구원</option>
+                            <option>대한건설협회</option>
+                            <option>대한건축사협회</option>
+                            <option>대한전문건설협회</option>
+                            <option>대한주택건설협회</option>
+                            <option>주택도시보증공사</option>
+                            <option>주택산업연구원</option>
+                            <option>한국부동산원</option>
+                            <option>한국감정평가협회</option>
+                            <option>한국건설기술관리협회</option>
+                            <option>한국건설기술연구원</option>
+                            <option>한국건설기술인협회</option>
+                            <option>한국건설산업연구원</option>
+                            <option>한국골재협회</option>
+                            <option>한국공인중개사협회</option>
+                            <option>한국자산관리공사</option>
+                            <option>한국주택금융공사</option>
+                            <option>한국토지주택공사</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="footerInfo">
+                    <p class="logo"><img src="assets/img/logo-b.png" /></p>
+                    <p>(06050) 서울특별시 강남구 언주로 711 (논현동 71-2, 건설회관 4층) <span>대표전화 : 02-6900-9000</span>팩스 : 02-511-6974</p>
+                    <p class="copy">Copyright(c) 2005 Korea Housing Association. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // ==================== 1. 탭 기능 ====================
+                const tabControls = document.getElementById("myTabs");
+                if (tabControls) {
+                    const activateTab = (targetId) => {
+                        const buttons = tabControls.querySelectorAll(".tab-button");
+                        const panels = document.querySelectorAll(".tab-panel");
+                        buttons.forEach((btn) => btn.classList.remove("active"));
+                        panels.forEach((panel) => panel.classList.remove("active"));
+                        const clickedButton = tabControls.querySelector(`[data-tab-target="${targetId}"]`);
+                        if (clickedButton) clickedButton.classList.add("active");
+                        const targetPanel = document.getElementById(targetId);
+                        if (targetPanel) targetPanel.classList.add("active");
+                    };
+                    tabControls.addEventListener("click", (event) => {
+                        const button = event.target.closest(".tab-button");
+                        if (button) activateTab(button.getAttribute("data-tab-target"));
+                    });
+                }
+
+                // ==================== 2. 싱글 슬라이더 (자동) ====================
+                const initSingleSlider = () => {
+                    const wrapper = document.getElementById("mySlider");
+                    const container = document.getElementById("slidesContainer");
+                    const prev = document.getElementById("prevButton");
+                    const next = document.getElementById("nextButton");
+                    const pagination = document.getElementById("sliderPagination");
+                    if (!wrapper) return;
+
+                    let autoInterval;
+                    const slides = container.querySelectorAll(".slide");
+                    const total = slides.length;
+                    let current = 0;
+
+                    const createDots = () => {
+                        // 페이지네이션 요소가 없으면 생성하지 않음 (오류 방지)
+                        if (!pagination) return;
+                        for (let i = 0; i < total; i++) {
+                            const dot = document.createElement("span");
+                            dot.className = i === 0 ? "dot active" : "dot";
+                            dot.dataset.index = i;
+                            pagination.appendChild(dot);
+                        }
+                    };
+                    const move = (idx) => {
+                        if (idx < 0) current = total - 1;
+                        else if (idx >= total) current = 0;
+                        else current = idx;
+                        container.style.transform = `translateX(${-current * 100}%)`;
+                        // 페이지네이션 업데이트
+                        if (pagination) {
+                            pagination.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === current));
+                        }
+                    };
+                    const start = () => {
+                        if (autoInterval) clearInterval(autoInterval);
+                        autoInterval = setInterval(() => move(current + 1), 3000);
+                    };
+                    const stop = () => {
+                        if (autoInterval) clearInterval(autoInterval);
+                    };
+
+                    prev.addEventListener("click", () => {
+                        stop();
+                        move(current - 1);
+                        start();
+                    });
+                    next.addEventListener("click", () => {
+                        stop();
+                        move(current + 1);
+                        start();
+                    });
+                    if (pagination) {
+                        pagination.addEventListener("click", (e) => {
+                            const dot = e.target.closest(".dot");
+                            if (dot) {
+                                stop();
+                                move(parseInt(dot.dataset.index));
+                                start();
+                            }
+                        });
+                    }
+                    wrapper.addEventListener("mouseenter", stop);
+                    wrapper.addEventListener("mouseleave", start);
+
+                    createDots();
+                    start();
+                };
+                initSingleSlider();
+
+                // ==================== 3. 배너 슬라이더 (자동) ====================
+                const initBannerSlider = () => {
+                    const wrapper = document.getElementById("autoBannerWrapper");
+                    const container = document.getElementById("autoSlidesContainer");
+                    const prev = document.getElementById("autoPrevButton");
+                    const next = document.getElementById("autoNextButton");
+                    if (!wrapper) return;
+
+                    let autoInterval;
+                    const total = container.querySelectorAll(".banner-slide").length;
+                    const visible = 3;
+                    // 슬라이딩 가능한 최대 단계 계산 (전체 - 보이는 개수)
+                    const maxSteps = Math.max(0, total - visible);
+                    let step = 0;
+
+                    const move = (dir) => {
+                        let nextStep = step + dir;
+                        if (nextStep > maxSteps) nextStep = 0;
+                        else if (nextStep < 0) nextStep = maxSteps;
+                        step = nextStep;
+                        container.style.transform = `translateX(${-step * (100 / visible)}%)`;
+                    };
+                    const start = () => {
+                        if (autoInterval) clearInterval(autoInterval);
+                        autoInterval = setInterval(() => move(1), 3000);
+                    };
+                    const stop = () => {
+                        if (autoInterval) clearInterval(autoInterval);
+                    };
+
+                    prev.addEventListener("click", () => {
+                        stop();
+                        move(-1);
+                        start();
+                    });
+                    next.addEventListener("click", () => {
+                        stop();
+                        move(1);
+                        start();
+                    });
+                    wrapper.addEventListener("mouseenter", stop);
+                    wrapper.addEventListener("mouseleave", start);
+                    start();
+                };
+                initBannerSlider();
+
+                // ==================== 4. 메뉴 탭 슬라이더 (수동 순환) ====================
+                const initMenuTabSlider = () => {
+                    const menuTabs = document.getElementById("menuTabs");
+                    if (!menuTabs) return;
+
+                    const initPanel = (panelId) => {
+                        const panel = document.getElementById(panelId);
+                        if (!panel) return;
+                        const container = panel.querySelector(".tab-slider-container");
+                        const prev = panel.querySelector(".prev-button");
+                        const next = panel.querySelector(".next-button");
+                        if (!container) return;
+
+                        const total = container.querySelectorAll(".menu-item-slide").length;
+                        const visible = 4;
+                        const max = Math.max(0, total - visible);
+                        let current = parseInt(container.dataset.step || "0");
+
+                        const move = (dir) => {
+                            let nextStep = current + dir;
+                            if (max > 0) {
+                                // 순환 로직
+                                if (nextStep < 0) nextStep = max;
+                                else if (nextStep > max) nextStep = 0;
+                            } else {
+                                nextStep = 0;
+                            } // 슬라이드가 충분하지 않을 경우 움직이지 않음
+
+                            current = nextStep;
+                            container.dataset.step = current;
+                            container.style.transform = `translateX(${-current * (100 / visible)}%)`;
+                        };
+
+                        // 이벤트 리스너 중복 추가 방지
+                        if (prev && !prev.hasInit) {
+                            prev.addEventListener("click", () => move(-1));
+                            prev.hasInit = true;
+                        }
+                        if (next && !next.hasInit) {
+                            next.addEventListener("click", () => move(1));
+                            next.hasInit = true;
+                        }
+                        move(0); // 현재 위치로 초기화
+                    };
+
+                    const activate = (targetId) => {
+                        document.querySelectorAll(".menu-tab-panel").forEach((p) => p.classList.remove("active"));
+                        document.querySelectorAll("#menuTabs .tab-button").forEach((b) => b.classList.remove("active"));
+
+                        const btn = menuTabs.querySelector(`[data-tab-target="${targetId}"]`);
+                        const pnl = document.getElementById(targetId);
+
+                        if (btn) btn.classList.add("active");
+                        if (pnl) {
+                            pnl.classList.add("active");
+                            initPanel(targetId);
+                        }
+                    };
+
+                    menuTabs.addEventListener("click", (e) => {
+                        const btn = e.target.closest(".tab-button");
+                        if (btn) activate(btn.getAttribute("data-tab-target"));
+                    });
+                    // 첫번째 탭 초기화 (첫 로드 시)
+                    const first = menuTabs.querySelector(".tab-button");
+                    if (first) activate(first.getAttribute("data-tab-target"));
+                };
+                initMenuTabSlider();
+
+                // ==================== 5. 파트너 로고 슬라이더 (자동 순환 & 무한 스텝) ====================
+                const initLogoSlider = () => {
+                    const wrapper = document.getElementById("logoSliderWrapper");
+                    const container = document.getElementById("logoSlidesContainer");
+                    const prevButton = document.getElementById("logoPrevButton");
+                    const nextButton = document.getElementById("logoNextButton");
+                    if (!wrapper || !container) return;
+
+                    let autoInterval;
+                    const originalSlides = Array.from(container.children);
+                    const slidesCount = originalSlides.length;
+                    let currentIdx = 0; // 현재 보이는 슬라이드의 인덱스
+
+                    // 1. 클론 생성 (무한 루프 준비: 원본 슬라이드 전체를 클론)
+                    originalSlides.forEach((slide) => {
+                        const clone = slide.cloneNode(true);
+                        clone.classList.add("clone");
+                        container.appendChild(clone);
+                    });
+
+                    const totalSlides = container.children.length; // 원본 + 클론
+
+                    // 2. 이동 함수
+                    const move = (direction) => {
+                        let newIdx = currentIdx + direction;
+
+                        // 이동 애니메이션 적용
+                        container.style.transition = "transform 0.5s ease-in-out";
+
+                        if (newIdx >= slidesCount) {
+                            // 순방향: 끝에 도달 -> 클론된 첫 번째 아이템으로 이동
+                            newIdx = slidesCount; // 클론된 첫 번째 아이템의 인덱스는 slidesCount
+
+                            // 이동 거리 계산: newIdx 번째 아이템의 시작점 (첫 번째 아이템 기준)
+                            const targetSlide = container.children[newIdx];
+                            const offset = targetSlide.offsetLeft - originalSlides[0].offsetLeft;
+
+                            container.style.transform = `translateX(-${offset}px)`;
+
+                            // 애니메이션 끝난 후 (0.5초 후), 원본의 첫 번째 아이템 위치로 즉시 복귀
+                            setTimeout(() => {
+                                container.style.transition = "none";
+                                container.style.transform = "translateX(0)";
+                                currentIdx = 0;
+                                // 다음 루프를 위해 transition 다시 켜기
+                                setTimeout(() => (container.style.transition = "transform 0.5s ease-in-out"), 50);
+                            }, 500);
+                        } else if (newIdx < 0) {
+                            // 역방향: 맨 앞으로 돌아가기 (로고 슬라이더는 순환이 복잡하므로 즉시 복귀 처리)
+
+                            // 1. 원본의 마지막 아이템 위치로 즉시 이동
+                            container.style.transition = "none";
+                            currentIdx = slidesCount - 1;
+                            const targetSlide = container.children[currentIdx];
+                            const offset = targetSlide.offsetLeft - originalSlides[0].offsetLeft;
+                            container.style.transform = `translateX(-${offset}px)`;
+
+                            // 2. 애니메이션을 다시 켜기
+                            setTimeout(() => (container.style.transition = "transform 0.5s ease-in-out"), 50);
+                        } else {
+                            // 일반적인 이동
+                            const targetSlide = container.children[newIdx];
+                            const offset = targetSlide.offsetLeft - originalSlides[0].offsetLeft;
+
+                            container.style.transform = `translateX(-${offset}px)`;
+                            currentIdx = newIdx;
+                        }
+                    };
+
+                    // 3. 자동 재생 (순방향)
+                    const startAutoPlay = () => {
+                        if (autoInterval) clearInterval(autoInterval);
+                        autoInterval = setInterval(() => move(1), 3000);
+                    };
+
+                    const stopAutoPlay = () => {
+                        if (autoInterval) clearInterval(autoInterval);
+                    };
+
+                    // 4. 이벤트 리스너
+                    nextButton.addEventListener("click", () => {
+                        stopAutoPlay();
+                        move(1);
+                        startAutoPlay();
+                    });
+                    prevButton.addEventListener("click", () => {
+                        stopAutoPlay();
+                        move(-1);
+                        startAutoPlay();
+                    });
+
+                    wrapper.addEventListener("mouseenter", stopAutoPlay);
+                    wrapper.addEventListener("mouseleave", startAutoPlay);
+
+                    // 5. 초기화 및 시작
+                    startAutoPlay();
+                };
+                initLogoSlider();
+
+                // -------------------- Intersection Observer 로직 (애니메이션) --------------------
+
+                let contentObserver;
+
+                function initializeObserver() {
+                    // Intersection Observer 설정
+                    const observerOptions = {
+                        root: null, // 뷰포트
+                        rootMargin: "0px",
+                        threshold: 0.2, // 요소의 20%가 보일 때
+                    };
+
+                    contentObserver = new IntersectionObserver((entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                // 'active' 클래스를 추가하여 애니메이션 발동
+                                entry.target.classList.add("active");
+                                // 한 번 실행 후 관찰 중지
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, observerOptions);
+                }
+
+                // 애니메이션이 적용되지 않은 새로운 아이템들을 관찰 시작
+                function observeNewItems() {
+                    if (!contentObserver) {
+                        initializeObserver();
+                    }
+                    // .animate-item 클래스는 있지만 .active 클래스가 없는 요소만 선택
+                    const animatedElements = document.querySelectorAll(".animate-item:not(.active)");
+                    animatedElements.forEach((element) => {
+                        contentObserver.observe(element);
+                    });
+                }
+
+                // 페이지 로드 시 애니메이션 관찰 시작
+                observeNewItems();
+            });
+        </script>
+        <script>
+            document.addEventListener("click", function (event) {
+                const dropdownMenu = document.getElementById("dropdownMenu");
+
+                if (!dropdownMenu) return; // dropdownMenu가 없으면 로직 실행 안함
+
+                const clickedSearchBtn = event.target.closest(".searchBtn");
+
+                if (clickedSearchBtn) {
+                    dropdownMenu.classList.toggle("show");
+                    event.stopPropagation();
+                } else if (dropdownMenu.classList.contains("show")) {
+                    if (!dropdownMenu.contains(event.target)) {
+                        dropdownMenu.classList.remove("show");
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
