@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+
+:root {
+    --default-font: 1rem; /*16px*/
+    --small-font: 0.88rem; /*14px*/
+    --basic-font: 1.13rem; /*18px*/
+    --mdbig-font: 1.25rem; /*20px*/
+    --big-font: 1.5rem; /*24px*/
+    --page-title: 1.88rem; /*30px*/
+    --ft-color-basic: #333;
+    --point-color-blue: #447def;
+    --menu-color: #3268f0;
+    --d-border-color: #aaa;
+    /*
+  0.75rem(12);0.813rem(13);0.875rem(14);0.938rem(15);1.063rem(17);
+  1.125rem(18);
+  1.25rem(20);1.375rem(22);1.5rem(24);1.563rem(25);1.688rem(27);
+  1.875rem(30);2.5rem(40);2.813rem(45);3.125rem(50);3.75rem(60);
+  */
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Pretendard", "Poppins", sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: #27292d;
+}
+body {
+    font-size: 16px;
+}
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+a,
+option,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button,
+figure,
+section,
+article,
+main,
+aside,
+nav,
+header,
+footer,
+figcaption {
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+fieldset,
+img {
+    border: 0 none;
+    vertical-align: top;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+input,
+select,
+textarea,
+button {
+    vertical-align: middle;
+    font-size: 1rem;
+}
+button {
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*input:checked[type='checkbox'] {background-color:#666; -moz-appearance:checkbox; -webkit-appearance:checkbox;}
+input[type='text'],input[type='password'],input[type='submit'],input[type='search'],input[type='tel'],input[type='email'],html input[type='button'],input[type='reset'] {-moz-appearance:none; -webkit-appearance:none; border-radius:0;}
+input[type='search']::-webkit-search-cancel-button {-moz-appearance:none; -webkit-appearance:none;} */ /* 모바일 인풋초기화 */
+a {
+    text-decoration: none; /* -webkit-tap-highlight-color:transparent;*/
+    color: inherit;
+}
+a:active,
+a:hover {
+    text-decoration: none;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+caption {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    text-indent: -99999999px;
+}
+.cf:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+::placeholder {
+    color: #999;
+    font-weight: 500;
+}
+input:focus,
+select:focus {
+    outline: none;
+}
+
+select {
+    background: url(../images/select_arrow.png) no-repeat right 9px center;
+    padding: 0 40px 0 14px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+select::-ms-expand {
+    opacity: 0;
+}

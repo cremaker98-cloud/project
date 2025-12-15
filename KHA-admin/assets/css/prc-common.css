@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+:root {
+    --default-font: 1rem; /*16px*/
+    --small-font: 0.88rem; /*14px*/
+    --basic-font: 1.13rem; /*18px*/
+    --mdbig-font: 1.25rem; /*20px*/
+    --big-font: 1.5rem; /*24px*/
+    --page-title: 1.88rem; /*30px*/
+    --th-color: #5f6163;
+    --ft-color-basic: #333;
+    --point-color-blue: #447def;
+    --menu-color: #3268f0;
+    --d-border-color: #aaa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+header > ul {
+    display: flex;
+}
+.utilMenu {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+.lnbWrap {
+    background-color: #f5f5f5;
+}
+
+.container {
+    flex: 1;
+    padding: 50px;
+}
+
+::placeholder {
+    color: #999;
+    font-weight: 500;
+}
+input:focus,
+select:focus {
+    outline: none;
+}
+
+select {
+    background: url(../img/arrow-select.svg) no-repeat right 9px center;
+    padding: 0 40px 0 14px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+select::-ms-expand {
+    opacity: 0;
+}
+
+/* 드롭다운 전체 감싸는 영역 */
+.custom-select-wrapper {
+    position: relative;
+}
+
+input[type="text"],
+#toggleButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    color: #333;
+    font-weight: 500;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    padding: 0 15px;
+}
+.w-auto {
+    width: auto !important;
+}
+
+/* 드롭다운 토글 버튼 스타일 */
+#toggleButton {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#toggleButton:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+#toggleButton:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+#toggleButton::after {
+    content: url("../img/arrow-select.svg"); /* 유니코드 아래쪽 화살표 */
+    font-size: 12px;
+    margin-left: 10px;
+    color: #666;
+    transition: transform 0.3s;
+    display: inline-block;
+    line-height: 1;
+}
+#toggleButton.dropdown-open::after {
+    transform: rotate(180deg);
+}
+/* 실제 드롭다운 메뉴 스타일 */
+#checkboxDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 4px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 250px;
+    z-index: 100;
+    display: none;
+}
+#checkboxDropdown.is-open {
+    display: block;
+}
+
+/* 항목 레이블 스타일 */
+#checkboxDropdown label {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    border-bottom: 1px solid #eee;
+}
+#checkboxDropdown label:last-child {
+    border-bottom: none;
+}
+#checkboxDropdown label:hover {
+    background-color: #e6f0ff;
+}
+/* 체크박스 스타일 */
+.item-checkbox {
+    margin-right: 10px;
+    accent-color: #007bff;
+    width: 18px;
+    height: 18px;
+}
+.item-checkbox + span {
+    color: #333;
+    font-size: 14px;
+}

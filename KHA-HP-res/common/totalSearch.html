@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/common.css" />
+        <link rel="stylesheet" href="../assets/css/kha-style.css" />
+        <link rel="stylesheet" href="../assets/css/kha-mob.css" />
+
+        <script src="../assets/js/all.min.js"></script>
+        <script src="../assets/js/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script src="../assets/js/jquery.waypoints.min.js"></script>
+        <script src="../assets/js/jqCustom.js"></script>
+
+        <title>한국주택협회</title>
+    </head>
+
+    <body class="subBody">
+        <!--s: Header-->
+        <div id="header-placeholder"></div>
+        <!--e: Header-->
+
+        <!--s: Main-->
+        <main>
+            <section class="subWrap">
+                <!-- s:container-->
+                <section class="container">
+                    <div class="subTitle">
+                        <h3>통합검색</h3>
+                        <div id="link-buttons-placeholder"></div>
+                    </div>
+
+                    <!-- s: content-->
+                    <section class="content">
+                        <!-- s: search -->
+                        <div class="totalSearch">
+                            <p class="textbox"><input type="text" placeholder="검색어를 입력해주세요." /></p>
+                            <p class="btnbox">
+                                <a href="#" class="btn-search"><img src="../assets/img/btn-search-w.svg" alt="search" /></a>
+                                <span><input type="checkbox" id="inResult" /> <label for="inResult">결과내 재검색</label></span>
+                            </p>
+                        </div>
+                        <!-- e: search -->
+
+                        <div class="tab-container">
+                            <!-- 탭 버튼 및 스크롤 영역 -->
+                            <div class="tab-header-wrapper">
+                                <!-- 왼쪽 스크롤 버튼 -->
+                                <button id="scrollLeftBtn" class="nav-button left">
+                                    <img src="../assets/img/tab-arrow-left-w.svg" alt="Previous" />
+                                </button>
+
+                                <!-- 실제 스크롤되는 영역 -->
+                                <div id="tabScrollArea" class="tab-scroll-area">
+                                    <ul class="tab-list">
+                                        <!-- 스크롤 테스트를 위해 10개 항목 추가 -->
+                                        <li class="active">
+                                            <a href="#" class="tab-button" data-tab="all">전체<span>129</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab1">공지사항<span>28</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab2">부동산뉴스<span>28</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab3">행정규칙(훈령,예규,고시)<span>12</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab4">주택정책제도<span>34</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab5">연구보고서<span>19</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab6">탭메뉴6<span>9</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab7">탭메뉴7<span>5</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab8">탭메뉴8<span>9</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="tab-button" data-tab="tab9">탭메뉴9<span>10</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 오른쪽 스크롤 버튼 -->
+                                <button id="scrollRightBtn" class="nav-button right">
+                                    <img src="../assets/img/tab-arrow-right-w.svg" alt="Next" />
+                                </button>
+                            </div>
+
+                            <!-- 탭 내용 영역 -->
+                            <div class="tab-content-container">
+                                <!-- 탭 내용 추가 (스크롤 테스트를 위해 10개 모두 추가) -->
+                                <div id="all" class="tab-content active">
+                                    <!-- category-list -->
+                                    <div class="result">
+                                        <div class="title-category">
+                                            <h3>공지사항<span>29</span></h3>
+                                            <a href="#" class="plusMore" data-target-tab="tab1">더보기</a>
+                                        </div>
+                                        <div class="cont-detail">
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 <strong>입주계획</strong> 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        <p>
+                                                            우리협회는 회원사로부터 "2021년도 분양계획 및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. "2021년도 분양계획
+                                                            및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….우리협회는 회원사로부터 "2021년도 분양계획 및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책
+                                                            건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. "2021년도 분양계획 및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료
+                                                            제출을 요청드리며 해당사항이 ….
+                                                        </p>
+                                                        <span class="addFile">첨부파일문서.pdf</span>
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 입주계획 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        우리협회는 회원사로부터 "2021년도 분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. 우리협회는 회원사로부터 "2021년도
+                                                        분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- e: category-list -->
+                                    <!-- category-list -->
+                                    <div class="result">
+                                        <div class="title-category">
+                                            <h3>부동산 뉴스<span>29</span></h3>
+                                            <a href="#" class="plusMore" data-target-tab="tab2">더보기</a>
+                                        </div>
+                                        <div class="cont-detail">
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 입주계획 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        우리협회는 회원사로부터 "2021년도 분양계획 및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. "2021년도 분양계획 및
+                                                        <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 입주계획 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        우리협회는 회원사로부터 "2021년도 분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. 우리협회는 회원사로부터 "2021년도
+                                                        분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- e: category-list -->
+                                </div>
+                                <div id="tab1" class="tab-content">
+                                    <!-- category-list -->
+                                    <div class="result">
+                                        <div class="title-category">
+                                            <h3>공지사항<span>29</span></h3>
+                                        </div>
+                                        <div class="cont-detail">
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 <strong>입주계획</strong> 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        <p>
+                                                            우리협회는 회원사로부터 "2021년도 분양계획 및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. "2021년도 분양계획
+                                                            및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….우리협회는 회원사로부터 "2021년도 분양계획 및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책
+                                                            건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. "2021년도 분양계획 및 <strong>입주계획</strong>"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료
+                                                            제출을 요청드리며 해당사항이 ….
+                                                        </p>
+                                                        <span class="addFile">첨부파일문서.pdf</span>
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 입주계획 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        우리협회는 회원사로부터 "2021년도 분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. 우리협회는 회원사로부터 "2021년도
+                                                        분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 입주계획 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        우리협회는 회원사로부터 "2021년도 분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. 우리협회는 회원사로부터 "2021년도
+                                                        분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                            <a href="#">
+                                                <dl>
+                                                    <dt>2021년도 분양계획 및 입주계획 자료제출 요청<span class="date">2025-10-15</span></dt>
+                                                    <dd>
+                                                        우리협회는 회원사로부터 "2021년도 분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 없는 경우에는 유선으로 연락주시기 바랍니다. 우리협회는 회원사로부터 "2021년도
+                                                        분양계획 및 입주계획"을 파악하여 대 정부 및 국회 정책 건의 등 자료로 활용하고자 붙임과 같이 자료 제출을 요청드리며 해당사항이 ….
+                                                    </dd>
+                                                </dl>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- e: category-list -->
+                                    <!-- s:pasing-->
+                                    <div class="pasing">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><img src="../assets/img/btn-pasing-left-2.svg" alt="first" /></a>
+                                                <a href="#"><img src="../assets/img/btn-pasing-left-1.svg" alt="Previous" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="on">1</a>
+                                                <a href="#">2</a>
+                                                <a href="#">3</a>
+                                                <a href="#">4</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="../assets/img/btn-pasing-right-1.svg" alt="next" /></a>
+                                                <a href="#"><img src="../assets/img/btn-pasing-right-2.svg" alt="last" /></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- e:pasing-->
+                                </div>
+                                <div id="tab2" class="tab-content">
+                                    <div class="result">
+                                        <div class="title-category">
+                                            <h3>부동산뉴스<span>29</span></h3>
+                                        </div>
+                                        <div class="cont-detail">내용</div>
+                                    </div>
+                                </div>
+                                <div id="tab3" class="tab-content">
+                                    <div class="result">
+                                        <div class="title-category">
+                                            <h3>행정규칙(훈령,예규,고시)<span>29</span></h3>
+                                        </div>
+                                        <div class="cont-detail">내용</div>
+                                    </div>
+                                </div>
+                                <div id="tab4" class="tab-content">
+                                    <div class="result">
+                                        <div class="title-category">
+                                            <h3>탭4<span>0</span></h3>
+                                        </div>
+                                        <div class="cont-detail">내용</div>
+                                    </div>
+                                </div>
+                                <div id="tab5" class="tab-content">
+                                    <div class="title-category">
+                                        <h3>탭5<span>0</span></h3>
+                                    </div>
+                                    <div class="cont-detail">내용</div>
+                                </div>
+                                <div id="tab6" class="tab-content">
+                                    <div class="title-category">
+                                        <h3>탭6<span>0</span></h3>
+                                    </div>
+                                    <div class="cont-detail">내용</div>
+                                </div>
+                                <div id="tab7" class="tab-content">
+                                    <div class="title-category">
+                                        <h3>탭7<span>0</span></h3>
+                                    </div>
+                                    <div class="cont-detail">내용</div>
+                                </div>
+                                <div id="tab8" class="tab-content">
+                                    <div class="title-category">
+                                        <h3>탭8<span>0</span></h3>
+                                    </div>
+                                    <div class="cont-detail">내용</div>
+                                </div>
+                                <div id="tab9" class="tab-content">
+                                    <div class="title-category">
+                                        <h3>탭9<span>0</span></h3>
+                                    </div>
+                                    <div class="cont-detail">내용</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- e: content-->
+                </section>
+                <!-- e:container-->
+            </section>
+        </main>
+        <!--e: Main-->
+
+        <!--s: Footer-->
+        <div id="footer-placeholder"></div>
+        <!--e: Footer-->
+        <script src="../assets/js/jqCustom-menu.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // --- 필수 DOM 요소 및 상수 정의 ---
+                const tabScrollArea = document.getElementById("tabScrollArea");
+                const scrollLeftBtn = document.getElementById("scrollLeftBtn");
+                const scrollRightBtn = document.getElementById("scrollRightBtn");
+                const SCROLL_AMOUNT = 150;
+                const TOLERANCE = 15; // 스크롤 끝 감지 오차 범위 (안정성 강화)
+
+                /**
+                 * 스크롤 버튼의 활성화/비활성화 상태를 업데이트합니다.
+                 */
+                const updateScrollButtons = () => {
+                    if (!tabScrollArea || !scrollLeftBtn || !scrollRightBtn) return;
+
+                    // [핵심 수정] setTimeout을 제거하고 즉시 상태를 확인합니다.
+                    const { scrollLeft, scrollWidth, clientWidth } = tabScrollArea;
+                    const maxScrollLeft = scrollWidth - clientWidth;
+                    const isScrollable = maxScrollLeft > TOLERANCE;
+
+                    if (!isScrollable) {
+                        // 스크롤할 필요가 없으면 스크롤을 0으로 초기화하고 네이티브 disabled 속성 사용
+                        tabScrollArea.scrollLeft = 0;
+                        scrollLeftBtn.disabled = true;
+                        scrollRightBtn.disabled = true;
+                    } else {
+                        // 스크롤이 필요하면 위치에 따라 네이티브 disabled 속성 토글
+                        scrollLeftBtn.disabled = scrollLeft <= TOLERANCE;
+                        scrollRightBtn.disabled = scrollLeft >= maxScrollLeft - TOLERANCE;
+                    }
+                };
+
+                /**
+                 * 활성 탭이 뷰포트에 보이도록 스크롤합니다.
+                 */
+                const scrollToView = (element) => {
+                    if (!tabScrollArea) return;
+
+                    const containerRect = tabScrollArea.getBoundingClientRect();
+                    const elementRect = element.getBoundingClientRect();
+
+                    let scrollDelta = 0;
+
+                    if (elementRect.left < containerRect.left) {
+                        scrollDelta = elementRect.left - containerRect.left - 20;
+                    } else if (elementRect.right > containerRect.right) {
+                        scrollDelta = elementRect.right - containerRect.right + 20;
+                    }
+
+                    if (scrollDelta !== 0) {
+                        tabScrollArea.scrollBy({ left: scrollDelta, behavior: "smooth" });
+                    }
+                    updateScrollButtons();
+                };
+
+                /**
+                 * 지정된 탭 ID에 해당하는 탭을 활성화하고 콘텐츠를 표시합니다.
+                 */
+                const activateTab = (targetTabId) => {
+                    document.querySelector(".tab-list li.active")?.classList.remove("active");
+                    document.querySelector(".tab-content.active")?.classList.remove("active");
+
+                    const targetButton = document.querySelector(`.tab-button[data-tab="${targetTabId}"]`);
+                    if (targetButton) {
+                        const targetLi = targetButton.closest("li");
+
+                        targetLi?.classList.add("active");
+                        document.getElementById(targetTabId)?.classList.add("active");
+
+                        if (targetLi) scrollToView(targetLi);
+                    }
+                };
+
+                // --- 이벤트 위임을 사용한 중앙 집중식 클릭 처리 ---
+
+                document.addEventListener("click", (event) => {
+                    const target = event.target;
+                    let targetTabId = null;
+
+                    if (target.matches(".tab-button")) {
+                        event.preventDefault();
+                        targetTabId = target.getAttribute("data-tab");
+                    } else if (target.matches(".plusMore")) {
+                        event.preventDefault();
+                        targetTabId = target.getAttribute("data-target-tab");
+                    }
+
+                    if (targetTabId) {
+                        activateTab(targetTabId);
+                    }
+                });
+
+                // 스크롤 버튼 이벤트 리스너
+                scrollLeftBtn?.addEventListener("click", () => {
+                    if (!scrollLeftBtn.disabled) {
+                        tabScrollArea.scrollBy({ left: -SCROLL_AMOUNT, behavior: "smooth" });
+                    }
+                });
+
+                scrollRightBtn?.addEventListener("click", () => {
+                    if (!scrollRightBtn.disabled) {
+                        tabScrollArea.scrollBy({ left: SCROLL_AMOUNT, behavior: "smooth" });
+                    }
+                });
+
+                // 사용자 스크롤 또는 리사이즈 시 버튼 상태 업데이트
+                tabScrollArea?.addEventListener("scroll", updateScrollButtons);
+                window.addEventListener("resize", updateScrollButtons);
+
+                // --- 초기화 로직 ---
+
+                const initialSetup = () => {
+                    updateScrollButtons();
+                    const initialActiveTab = document.querySelector(".tab-list li.active");
+                    if (initialActiveTab) {
+                        scrollToView(initialActiveTab);
+                    }
+                };
+
+                window.addEventListener("load", initialSetup);
+                initialSetup();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/prc-common.css" />
+        <link rel="stylesheet" href="assets/css/kha-prc.css" />
+
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/jqCustom.js"></script>
+
+        <title>업무전산</title>
+    </head>
+
+    <body>
+        <!--s: Header-->
+        <div id="header-placeholder"></div>
+        <!--e: Header-->
+
+        <!--s: Main-->
+        <main>
+            <!-- s:LNB-->
+            <section class="lnbWrap">
+                <div id="lnb-about-placeholder"></div>
+            </section>
+            <!-- e:LNB-->
+
+            <!-- s:container-->
+            <section class="container">
+                <!-- searchArea -->
+                <div class="searchArea">
+                    <div class="detail-area">
+                        <table class="view-table">
+                            <tr>
+                                <th>사용자ID</th>
+                                <td><input type="text" /></td>
+                                <th>사용자ID</th>
+                                <td><input type="text" /></td>
+                                <th>사용자ID</th>
+                                <td><input type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th>사용자ID</th>
+                                <td><input type="text" /></td>
+                                <th>사용자</th>
+                                <td><input type="text" /></td>
+                                <th>사용자ID</th>
+                                <td><input type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th>사용자ID</th>
+                                <td><input type="text" /></td>
+                                <th>선택셀렉트</th>
+                                <td>
+                                    <div class="custom-select-wrapper">
+                                        <!-- 커스텀 셀렉트박스 -->
+                                        <button id="toggleButton">
+                                            <span>커스텀 셀렉트박스</span>
+                                        </button>
+                                        <!-- Option -->
+                                        <div id="checkboxDropdown">
+                                            <label><input type="checkbox" class="item-checkbox" /><span>항목 1 (사과)</span></label>
+                                            <label><input type="checkbox" class="item-checkbox" /><span>항목 2 (바나나)</span></label>
+                                            <label><input type="checkbox" class="item-checkbox" /><span>항목 3 (오렌지)</span></label>
+                                            <label><input type="checkbox" class="item-checkbox" /><span>항목 4 (포도)</span></label>
+                                            <label><input type="checkbox" class="item-checkbox" /><span>항목 5 (딸기)</span></label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>사용자ID</th>
+                                <td><input type="text" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="button-area">
+                        <button class="btnForm">검색</button>
+                        <button class="btnForm">초기화</button>
+                    </div>
+                </div>
+                <!-- e: searchArea -->
+            </section>
+            <!-- e:container-->
+        </main>
+        <!--e: Main-->
+
+        <!--s: Footer-->
+        <div id="footer-placeholder"></div>
+        <!--e: Footer-->
+
+        <script>
+            // DOM 요소들을 변수에 저장합니다.
+            const toggleButton = document.getElementById("toggleButton");
+            const checkboxDropdown = document.getElementById("checkboxDropdown");
+
+            // 드롭다운 열림/닫힘 상태를 토글하는 함수
+            function toggleDropdown() {
+                // is-open 클래스를 토글하여 메뉴를 표시합니다.
+                const isOpen = checkboxDropdown.classList.toggle("is-open");
+
+                // 버튼 자체에 dropdown-open 클래스를 토글하여 화살표를 회전시킵니다.
+                toggleButton.classList.toggle("dropdown-open", isOpen);
+            }
+
+            // 버튼 클릭 시 토글 이벤트만 처리합니다.
+            toggleButton.addEventListener("click", toggleDropdown);
+
+            // 체크박스 클릭 시 드롭다운이 닫히지 않도록 이벤트 버블링을 막습니다. (선택 편의성을 위해)
+            const checkboxes = document.querySelectorAll(".item-checkbox");
+            checkboxes.forEach((checkbox) => {
+                checkbox.parentElement.addEventListener("click", (e) => {
+                    // 체크박스 항목 클릭 시, 해당 이벤트가 부모 요소까지 전달되는 것을 방지합니다.
+                    e.stopPropagation();
+                });
+            });
+        </script>
+
+        <script src="assets/js/jqCustom-menu.js"></script>
+    </body>
+</html>

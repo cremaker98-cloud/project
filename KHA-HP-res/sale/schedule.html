@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/common.css" />
+        <link rel="stylesheet" href="../assets/css/kha-style.css" />
+        <link rel="stylesheet" href="../assets/css/kha-mob.css" />
+
+        <script src="../assets/js/all.min.js"></script>
+        <script src="../assets/js/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script src="../assets/js/jquery.waypoints.min.js"></script>
+        <script src="../assets/js/jqCustom.js"></script>
+
+        <title>한국주택협회</title>
+    </head>
+
+    <body class="subBody">
+        <!--s: Header-->
+        <div id="header-placeholder"></div>
+        <!--e: Header-->
+
+        <!--s: sub Visual-->
+        <div class="subVisual pic2">
+            <div>
+                <h2>분양정보</h2>
+                <p>
+                    전국의 주요 주택 분양 및 입주 계획을 <br />
+                    한눈에 파악할 수 있는 종합 정보 공간입니다.
+                </p>
+            </div>
+        </div>
+        <!--e: sub Visual-->
+
+        <!--s: Main-->
+        <main>
+            <section class="subWrap">
+                <!-- s:LNB-->
+                <div id="lnb-sale-placeholder"></div>
+                <!-- e:LNB-->
+
+                <!-- s:container-->
+                <section class="container">
+                    <div class="subTitle">
+                        <h3>분양일정</h3>
+                        <div id="link-buttons-placeholder"></div>
+                    </div>
+
+                    <!-- s: content-->
+                    <section class="content">
+                        <div class="schedule">
+                            <a href=""><img src="../assets/img/arrow-left-w.svg" /><span>지난주</span></a>
+                            <div>
+                                <input type="date" />
+                                <i>~</i>
+                                <input type="date" />
+                            </div>
+                            <a href="" class="nextbtn"><span>다음주</span><img src="../assets/img/arrow-right-w.svg" /></a>
+                        </div>
+
+                        <!-- s: search -->
+                        <div class="search-box">
+                            <div class="multi">
+                                <div>
+                                    <label>지역</label>
+                                    <select>
+                                        <option>전체</option>
+                                        <option>서울특별시</option>
+                                        <option>부산광역시</option>
+                                        <option>대구광역시</option>
+                                        <option>울산광역시</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label>아파트명</label>
+                                    <select>
+                                        <option>전체</option>
+                                        <option>힐스테이트 용인포레</option>
+                                    </select>
+                                </div>
+                                <div class="flexfull">
+                                    <div class="search-text">
+                                        <input type="text" placeholder="검색어를 입력해주세요(예:힐스테이트..)" />
+                                    </div>
+                                    <a href="#" class="btn-search"><img src="../assets/img/btn-search-w.svg" alt="search" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: search -->
+
+                        <!-- s: tab -->
+                        <div class="tab px-6 pt-4">
+                            <!-- data-tab-group 속성을 추가하여 탭 그룹을 식별합니다. -->
+                            <ul data-tab-group="housing-status">
+                                <!-- 탭 항목을 data-tab 속성으로 심플하게 변경하고, 해당 값과 내용 ID를 연결합니다. -->
+                                <li class="on" data-tab="tab1"><a href="#">전체보기</a></li>
+                                <li data-tab="tab2"><a href="#">입주자 모집공고</a></li>
+                                <li data-tab="tab3"><a href="#">청약접수</a></li>
+                                <li data-tab="tab4"><a href="#">당첨자 발표</a></li>
+                                <li data-tab="tab5"><a href="#">당첨자 계약</a></li>
+                            </ul>
+                        </div>
+                        <!-- e: tab -->
+
+                        <!-- s: tab-content-area -->
+                        <div class="tab-content-area">
+                            <!-- 탭 내용의 ID를 data-tab 값과 일치하는 심플한 ID(tab1, tab2 등)로 변경했습니다. -->
+                            <div id="tab1" class="show">
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm">
+                                    <h4>2025-10-06 <span>월요일</span></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="post">입주자 모집공고</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        <a href="scheduleView.html" class="underline"> 힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지 </a>
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        <a href="scheduleView.html" class="underline"> 힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지 </a>
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="accept">청약접수</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="issue">당첨자 발표</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="contract">당첨자 계약</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm today">
+                                    <h4>2025-10-07 <span>화요일</span><strong>TODAY</strong></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="post">입주자 모집공고</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="accept">청약접수</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="issue">당첨자 발표</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="contract">당첨자 계약</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                            </div>
+
+                            <div id="tab2">
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm">
+                                    <h4>2025-10-06 <span>월요일</span></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="post">입주자 모집공고</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm today">
+                                    <h4>2025-10-07 <span>화요일</span><strong>TODAY</strong></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="post">입주자 모집공고</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                            </div>
+
+                            <div id="tab3">
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm">
+                                    <h4>2025-10-06 <span>월요일</span></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="accept">청약접수</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm today">
+                                    <h4>2025-10-07 <span>화요일</span><strong>TODAY</strong></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="accept">청약접수</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                            </div>
+
+                            <div id="tab4">
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm">
+                                    <h4>2025-10-06 <span>월요일</span></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="issue">당첨자 발표</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm today">
+                                    <h4>2025-10-07 <span>화요일</span><strong>TODAY</strong></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="issue">당첨자 발표</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                            </div>
+
+                            <div id="tab5">
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm">
+                                    <h4>2025-10-06 <span>월요일</span></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="contract">당첨자 계약</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                                <!--s: scheduleForm-->
+                                <div class="scheduleForm today">
+                                    <h4>2025-10-07 <span>화요일</span><strong>TODAY</strong></h4>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt>
+                                                    <span class="contract">당첨자 계약</span>
+                                                </dt>
+                                                <dd>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                    <p>
+                                                        <span>아파트</span>
+                                                        힐스테이트 용인포레, 경기도 용인시 처인구 삼가동 447-15번지외 15필지
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--s: scheduleForm-->
+                            </div>
+                        </div>
+                        <!-- e: tab-content-area -->
+                    </section>
+                    <!-- e: content-->
+                </section>
+                <!-- e:container-->
+            </section>
+        </main>
+        <!--e: Main-->
+
+        <!--s: Footer-->
+        <div id="footer-placeholder"></div>
+        <!--e: Footer-->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // 1. 모든 탭 리스트 항목 (.tab li)을 가져옵니다.
+                const tabListItems = document.querySelectorAll(".tab li");
+
+                // 2. 탭 내용 컨테이너를 가져옵니다.
+                const contentContainer = document.querySelector(".tab-content-area");
+
+                if (!tabListItems.length || !contentContainer) {
+                    console.warn("경고: 탭 메뉴 또는 탭 내용 컨테이너 요소를 찾을 수 없습니다.");
+                    return;
+                }
+
+                // 3. 탭 클릭 이벤트 리스너를 설정합니다.
+                tabListItems.forEach((item) => {
+                    item.addEventListener("click", function (e) {
+                        // 기본 링크 이동 방지
+                        e.preventDefault();
+
+                        // 4. 클릭된 탭 항목의 data-tab 속성 값을 가져옵니다. (심플한 ID)
+                        const tabId = this.getAttribute("data-tab");
+
+                        // 5. 모든 탭 항목에서 'on' 클래스를 제거합니다.
+                        tabListItems.forEach((li) => li.classList.remove("on"));
+
+                        // 6. 현재 클릭된 탭 항목에 'on' 클래스를 추가합니다.
+                        this.classList.add("on");
+
+                        // 7. 모든 탭 내용을 숨깁니다.
+                        // 이 방법 대신, contentContainer의 모든 자식 div를 선택합니다.
+                        const allContents = contentContainer.querySelectorAll("div");
+                        allContents.forEach((content) => content.classList.remove("show"));
+
+                        // 8. data-tab 속성 값과 일치하는 ID를 가진 탭 내용을 찾아서 표시합니다.
+                        const targetContent = document.getElementById(tabId);
+
+                        if (targetContent) {
+                            targetContent.classList.add("show");
+                            console.log(`탭 활성화: ${tabId}`);
+                        } else {
+                            console.error(`오류: ID가 "${tabId}"인 탭 내용을 찾을 수 없습니다.`);
+                        }
+                    });
+                });
+
+                // 초기 로드 시 첫 번째 탭의 내용을 보여주기 위한 함수 (이미 HTML에서 처리됨)
+                /*
+        if (tabListItems[0] && !tabListItems[0].classList.contains('on')) {
+             tabListItems[0].click();
+        }
+        */
+            });
+        </script>
+
+        <script src="../assets/js/jqCustom-menu.js"></script>
+    </body>
+</html>
