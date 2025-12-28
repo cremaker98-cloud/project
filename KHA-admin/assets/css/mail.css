@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+a{
+    text-decoration: none;
+}
+
+.wrap {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: #dde0e7;
+}
+
+.wrap > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 212px 207px 191px 218px;
+    width: 520px;
+    height: 560px;
+    border: 1px solid #59677c;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.wrap .box-top {
+    margin-top: 13px;
+
+}
+.wrap .box-top h1 {
+    margin: 0;
+}
+.wrap .box-top h1 a{
+    width: 264px;
+    display: block;
+}
+
+.wrap .box-top h1 a img{
+    max-width: 100%;
+}
+
+.wrap .box-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 448px;
+    border-top: 1px solid #59677c;
+    border-bottom: 1px solid #59677c;
+}
+
+.wrap .box-body h2 {
+    margin: 0;
+    margin-top: 32px;
+    width: 520px;
+    font-weight: 700;
+    font-size: 35px;
+    color: #3464ce;
+    text-align: center;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+}
+
+
+.wrap > .text1 {
+    margin-top: 22px;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+}
+
+.wrap .msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 70px;
+    border-radius: 7px;
+    font-weight: 700;
+    margin-top: 32px;
+    border: none;
+    background-color: #f0f0f0;
+    font-size: 30px;
+}
+
+.wrap.type2 .msg{
+    margin-top: 59px;
+    height: 122px;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    white-space: pre-line;
+    line-height: 22px;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+}
+
+.wrap .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 70px;
+    border-radius: 7px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 58px;
+    border: none;
+    background-color: #3464ce;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+}
+
+.wrap.type2 .btn {
+    margin-top: 67px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.wrap span {
+    display: flex;
+}
+
+.wrap .link {
+    margin-top: 26px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #9fb3df;
+    color: #2452b7;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.wrap .copyright {
+    margin: 11px 16px 16px 25px;
+    justify-content: center;
+    color: #999999;
+    font-size: 11px;
+}

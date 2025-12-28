@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Bootstrap --->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+        <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+
+        <link rel="stylesheet" href="assets/css/datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/select.datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/kha-prc.css" />
+
+        <title>업무전산-회원관리-회원사관리</title>
+    </head>
+
+    <body>
+        <main class="prcContainer">
+            <!--// <h3>:참고용 타이틀,<br/>,<hr />(class 없는 순수 hr)은 단순 경계를 나누기 위한 코드입니다. 필요한 영역만 사용!! -->
+            <h3>회원사관리</h3>
+            <br /><br />
+
+            <!---------------- s: 실사용 영역 ---------------->
+
+            <!-- s: 회원사관리-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: 25%" />
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>구분</th>
+                                    <td>
+                                        <select>
+                                            <option>전체</option>
+                                            <option>가입회원사</option>
+                                            <option>탈퇴회원사</option>
+                                        </select>
+                                    </td>
+                                    <th>검색어</th>
+                                    <td>
+                                        <div class="flexBox">
+                                            <select>
+                                                <option>업체명</option>
+                                            </select>
+                                            <input type="text" class="flex1" placeholder="조회할 내용을 입력해주세요." />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="prc-wrapper">
+                <table class="tb-p-1">
+                    <colgroup>
+                        <col style="width: 120px" />
+                        <col style="width: auto" />
+                        <col style="width: 120px" />
+                        <col style="width: auto" />
+                    </colgroup>
+                    <tr>
+                        <th>회원코드</th>
+                        <td colspan="3">19820005</td>
+                    </tr>
+                    <tr>
+                        <th class="check">경영상태</th>
+                        <td>
+                            <select>
+                                <option>정상</option>
+                            </select>
+                        </td>
+                        <th class="check">회원구분</th>
+                        <td>
+                            <select>
+                                <option>정회원</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">업체명</th>
+                        <td>
+                            <input type="text" class="fullWidth" placeholder="계룡건설산업(주)" />
+                        </td>
+                        <th class="check">설립일자</th>
+                        <td>
+                            <div class="date-picker">
+                                <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">등록번호</th>
+                        <td>
+                            <input type="text" class="fullWidth" placeholder="대전광역시-주택2003-001" />
+                        </td>
+                        <th class="check">가입일자</th>
+                        <td>
+                            <div class="date-picker">
+                                <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">법인번호</th>
+                        <td>
+                            <input type="text" class="fullWidth" placeholder="160111-0003121" />
+                        </td>
+                        <th class="check">등록일자</th>
+                        <td>
+                            <div class="date-picker">
+                                <input type="text" class="datePicker hasDatepicker" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">사업자번호</th>
+                        <td>
+                            <input type="text" class="fullWidth" placeholder="314-81-07954" />
+                        </td>
+                        <th>부도일자</th>
+                        <td>
+                            <div class="date-picker">
+                                <input type="text" class="datePicker hasDatepicker" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">회원상황</th>
+                        <td>
+                            <select>
+                                <option>정상</option>
+                            </select>
+                        </td>
+                        <th>탈퇴일자</th>
+                        <td>
+                            <div class="date-picker">
+                                <input type="text" class="datePicker hasDatepicker" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">지역구분</th>
+                        <td>
+                            <select>
+                                <option>인천광역시</option>
+                            </select>
+                        </td>
+                        <th class="check">협회임원</th>
+                        <td>
+                            <select>
+                                <option>협회임원사</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">자본금</th>
+                        <td>
+                            <input type="text" placeholder="44,634" />
+                            (백만원)
+                        </td>
+                        <th>DM발송지</th>
+                        <td>
+                            <select>
+                                <option>사무소</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">면적</th>
+                        <td class="multiOpt">
+                            <input type="text" placeholder="44,634" />
+                            (㎡)
+                            <input type="text" placeholder="44,634" />
+                            (평)
+                        </td>
+                        <th>홈페이지</th>
+                        <td>
+                            <input type="text" class="fullWidth" placeholder="http://www.krcon.co.kr" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">온라인증명서</th>
+                        <td class="multiOpt">
+                            <input type="checkbox" id="check1" />
+                            <label for="check1">온라인증명서 발급 제안해지</label>
+                        </td>
+                        <th>홈페이지 표시여부</th>
+                        <td>
+                            <input type="checkbox" id="check2" />
+                            <label for="check2">표시</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">제한사유</th>
+                        <td>
+                            <input type="text" class="fullWidth" />
+                        </td>
+                        <th>담당자</th>
+                        <td>
+                            <input type="text" class="fullWidth" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="check">종합정보</th>
+                        <td colspan="3">
+                            <input type="checkbox" id="check3" />
+                            <label for="check3">주택건설</label>
+
+                            <input type="checkbox" id="check4" />
+                            <label for="check4">전문건설업</label>
+
+                            <input type="checkbox" id="check5" />
+                            <label for="check5">대지조성</label>
+
+                            <input type="checkbox" id="check6" />
+                            <label for="check6">해외건설업</label>
+
+                            <input type="checkbox" id="check7" />
+                            <label for="check7">임대사업</label>
+
+                            <input type="checkbox" id="check8" />
+                            <label for="check8">시공권</label>
+
+                            <input type="checkbox" id="check9" />
+                            <label for="check9">일반건설업</label>
+
+                            <input type="checkbox" id="check10" />
+                            <label for="check10">택지대상 구분</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비고</th>
+                        <td colspan="3">
+                            <p class="bullet"><strong>상호변경 :</strong> 계룡건설(주) → 계룡건설산업(주)('84년)</p>
+                            <p class="bullet"><strong>등록번호 :</strong> 78-3 → 대전광역시-주택2003-001(03.12.15)</p>
+                            <p class="bullet"><strong>행정처분 :</strong> 경고(13.7.19) → 경고(16.7.15) → 경고처분 취소(17.6.29)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>탈퇴사유</th>
+                        <td colspan="3">
+                            <textarea rows="5"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <hr />
+
+            <div class="prc-wrapper">
+                <div class="tab-container">
+                    <!-- s: Tab-menu -->
+                    <input type="radio" name="tabs" id="tab1" checked />
+                    <input type="radio" name="tabs" id="tab2" />
+                    <input type="radio" name="tabs" id="tab3" />
+                    <input type="radio" name="tabs" id="tab4" />
+                    <input type="radio" name="tabs" id="tab5" />
+                    <input type="radio" name="tabs" id="tab6" />
+                    <input type="radio" name="tabs" id="tab7" />
+                    <input type="radio" name="tabs" id="tab8" />
+                    <input type="radio" name="tabs" id="tab9" />
+                    <input type="radio" name="tabs" id="tab10" />
+
+                    <div class="tab-menu">
+                        <label for="tab1">주소</label>
+                        <label for="tab2">대표자</label>
+                        <label for="tab3">임원</label>
+                        <label for="tab4">기술자</label>
+                        <label for="tab5">겸업</label>
+                        <label for="tab6">상별</label>
+                        <label for="tab7">처벌 및 하자</label>
+                        <label for="tab8">등록사항 변경</label>
+                        <label for="tab9">등록번호</label>
+                        <label for="tab10">경영상태</label>
+                    </div>
+                    <!-- e: Tab-menu -->
+
+                    <!-- s: tab1-content -->
+                    <div class="tab-content">
+                        <div id="content1" class="item">
+                            <div>
+                                <h4>본점주소</h4>
+                                <table class="tb-p-1">
+                                    <colgroup>
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>우편번호</th>
+                                        <td colspan="3">
+                                            <div class="flexBox">
+                                                <input type="text" class="smallWidth inactive" />
+                                                <button id="openModalBtn" class="btn-intable1">검색</button>
+                                                <button class="btn-intable2">주소복사</button>
+                                                (검색 버튼에 모달 팝업 샘플 적용)
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3">
+                                            <input type="text" class="fullWidth inactive mgb5" />
+                                            <input type="text" class="fullWidth" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>전화번호</th>
+                                        <td><input type="text" class="fullWidth" /></td>
+                                        <th>팩스번호</th>
+                                        <td><input type="text" class="fullWidth" /></td>
+                                    </tr>
+                                </table>
+
+                                <hr class="empty" />
+
+                                <h4>지점주소</h4>
+                                <table class="tb-p-1">
+                                    <colgroup>
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>우편번호</th>
+                                        <td colspan="3">
+                                            <div class="flexBox">
+                                                <input type="text" class="smallWidth inactive" />
+                                                <button class="btn-intable1">검색</button>
+                                                <button class="btn-intable2">주소복사</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3">
+                                            <input type="text" class="fullWidth inactive mgb5" />
+                                            <input type="text" class="fullWidth" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>전화번호</th>
+                                        <td><input type="text" class="fullWidth" /></td>
+                                        <th>팩스번호</th>
+                                        <td><input type="text" class="fullWidth" /></td>
+                                    </tr>
+                                </table>
+
+                                <hr class="empty" />
+
+                                <h4>사무소주소</h4>
+                                <table class="tb-p-1">
+                                    <colgroup>
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>우편번호</th>
+                                        <td colspan="3">
+                                            <div class="flexBox">
+                                                <input type="text" class="smallWidth inactive" />
+                                                <button class="btn-intable1">검색</button>
+                                                <button class="btn-intable2">주소복사</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3">
+                                            <input type="text" class="fullWidth inactive mgb5" />
+                                            <input type="text" class="fullWidth" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>전화번호</th>
+                                        <td><input type="text" class="fullWidth" /></td>
+                                        <th>팩스번호</th>
+                                        <td><input type="text" class="fullWidth" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab1-content -->
+
+                        <!-- s: tab2-content -->
+                        <div id="content2" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 대표자를 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">구분</th>
+                                                <td>
+                                                    <select>
+                                                        <option>대표이사</option>
+                                                    </select>
+                                                </td>
+                                                <th>성명(한자)</th>
+                                                <td class="multiOpt">
+                                                    <input type="text" />
+                                                    (한자)
+                                                    <input type="text" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="check">주민등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>직위</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>협회직책</th>
+                                                <td>
+                                                    <select>
+                                                        <option>대표이사</option>
+                                                    </select>
+                                                </td>
+                                                <th>비고</th>
+                                                <td><input type="text" class="fullWidth" /></td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">구분</th>
+                                                <td>
+                                                    <select>
+                                                        <option>대표이사</option>
+                                                    </select>
+                                                </td>
+                                                <th>성명(한자)</th>
+                                                <td class="multiOpt">
+                                                    <input type="text" placeholder="한글이름" />
+                                                    (한자)
+                                                    <input type="text" placeholder="한자이름" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="check">주민등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" placeholder="‘-’ 없이 숫자만 입력해주세요." />
+                                                </td>
+                                                <th>직위</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" placeholder="직위를 입력해주세요" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>협회직책</th>
+                                                <td>
+                                                    <select>
+                                                        <option>대표이사</option>
+                                                    </select>
+                                                </td>
+                                                <th>비고</th>
+                                                <td><input type="text" class="fullWidth" placeholder="비고를 입력해주세요" /></td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab2-content -->
+
+                        <!-- s: tab3-content -->
+                        <div id="content3" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 임원을 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">성명</th>
+                                                <td>
+                                                    <input type="text" />
+                                                </td>
+                                                <th class="check">주민등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>직위</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>입사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>협회직책</th>
+                                                <td>
+                                                    <select>
+                                                        <option>대표이사</option>
+                                                    </select>
+                                                </td>
+                                                <th>퇴사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비고</th>
+                                                <td colspan="3"><input type="text" class="fullWidth" /></td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">성명</th>
+                                                <td>
+                                                    <input type="text" />
+                                                </td>
+                                                <th class="check">주민등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>직위</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>입사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>협회직책</th>
+                                                <td>
+                                                    <select>
+                                                        <option>대표이사</option>
+                                                    </select>
+                                                </td>
+                                                <th>퇴사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비고</th>
+                                                <td colspan="3"><input type="text" class="fullWidth" /></td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab3-content -->
+
+                        <!-- s: tab4-content -->
+                        <div id="content4" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 기술자를 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">종목</th>
+                                                <td>
+                                                    <select>
+                                                        <option>건축</option>
+                                                    </select>
+                                                </td>
+                                                <th class="check">급별</th>
+                                                <td>
+                                                    <select>
+                                                        <option>건축</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="check">성명</th>
+                                                <td>
+                                                    <input type="text" />
+                                                </td>
+                                                <th class="check">주민등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>면허번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>입사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>직위</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>퇴사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비고</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>보고일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">종목</th>
+                                                <td>
+                                                    <select>
+                                                        <option>건축</option>
+                                                    </select>
+                                                </td>
+                                                <th class="check">급별</th>
+                                                <td>
+                                                    <select>
+                                                        <option>건축</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="check">성명</th>
+                                                <td>
+                                                    <input type="text" />
+                                                </td>
+                                                <th class="check">주민등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>면허번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>입사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>직위</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>퇴사일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비고</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>보고일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab4-content -->
+
+                        <!-- s: tab5-content -->
+                        <div id="content5" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 겸업를 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">업종</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th class="check">면허번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="check">취득일</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                                <th>면허기관</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>실적</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>비고</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab5-content -->
+
+                        <!-- s: tab6-content -->
+                        <div id="content6" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 상별을 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">구분</th>
+                                                <td>
+                                                    <select>
+                                                        <option>포상</option>
+                                                    </select>
+                                                </td>
+                                                <th>일자</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>문서번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>시행청</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>별점</th>
+                                                <td>
+                                                    <input type="text" />
+                                                </td>
+                                                <th>내용</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비고</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>처리일자</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab6-content -->
+
+                        <!-- s: tab7-content -->
+                        <div id="content7" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 처벌 및 하자를 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">구분</th>
+                                                <td>
+                                                    <select>
+                                                        <option>처벌</option>
+                                                    </select>
+                                                </td>
+                                                <th>일자</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>행정기관</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                                <th>사유</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>정지월수</th>
+                                                <td>
+                                                    <input type="text" />
+                                                </td>
+                                                <th>행정처분내용</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비고</th>
+                                                <td colspan="3">
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab7-content -->
+
+                        <!-- s: tab8-content -->
+                        <div id="content8" class="item">
+                            <div class="list-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="tb-top">
+                                        <div class="dataTables_info">
+                                            <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                                        </div>
+                                        <div class="dataTables_length" id="boardTable_length">
+                                            <label>
+                                                <select class="sel-tool-1">
+                                                    <option value="10">10개씩</option>
+                                                    <option value="20">20개씩</option>
+                                                    <option value="30">30개씩</option>
+                                                    <option value="40">40개씩</option>
+                                                    <option value="50">50개씩</option>
+                                                    <option value="100">100개씩</option>
+                                                    <option value="1000">1천개씩</option>
+                                                    <option value="10000">1만개씩</option>
+                                                    <option value="100000">10만개씩</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="tb-body">
+                                        <table class="tb-1 no-footer dataTable">
+                                            <colgroup>
+                                                <col style="width: 8%" />
+                                                <col style="width: 15%" />
+                                                <col style="width: 12%" />
+                                                <col style="width: 20%" />
+                                                <col style="width: 20%" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>No.</th>
+                                                    <th>변경일</th>
+                                                    <th>구분</th>
+                                                    <th>변경전</th>
+                                                    <th>변경후</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td>53</td>
+                                                <td>2025-11-21 14:21:59</td>
+                                                <td>대표자</td>
+                                                <td>한승구, 오태식, 윤길호</td>
+                                                <td>한승구, 오태식</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>52</td>
+                                                <td>2025-11-21 14:21:59</td>
+                                                <td>소재지</td>
+                                                <td>대구광역시 서구 월평중로 21</td>
+                                                <td>대전광역시 서구 문정로 48번길 3 태광</td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="noData">등록 또는 조회 데이터가 없습니다.</div>
+
+                                    <div class="btn-box">
+                                        <button class="btn-4">목록</button>
+                                        <button class="btn-2">삭제</button>
+                                        <button class="btn-3">저장</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: tab8-content -->
+
+                        <!-- s: tab9-content -->
+                        <div id="content9" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 등록번호를 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">일자</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                                <th class="check">등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">일자</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                                <th class="check">등록번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab9-content -->
+
+                        <!-- s: tab10-content -->
+                        <div id="content10" class="item">
+                            <div class="addMember">
+                                <p>'추가' 버튼을 선택 후, 등록번호를 추가해주세요.</p>
+                                <div>
+                                    <button class="btn-s2">삭제</button>
+                                    <button class="btn-s1">추가</button>
+                                </div>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">일자</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                                <th class="check">경영상태</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                                <p class="errorMsg">도움말(에러 메시지) 표시 영역</p>
+                            </div>
+
+                            <div class="checkForm">
+                                <dl>
+                                    <dt><input type="checkbox" /></dt>
+                                    <dd>
+                                        <table class="tb-p-1">
+                                            <colgroup>
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                                <col style="width: 120px" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <tr>
+                                                <th class="check">일자</th>
+                                                <td>
+                                                    <div class="date-picker">
+                                                        <input type="text" class="datePicker hasDatepicker" />
+                                                    </div>
+                                                </td>
+                                                <th class="check">경영번호</th>
+                                                <td>
+                                                    <input type="text" class="fullWidth" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-4">목록</button>
+                                <button class="btn-2">삭제</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                        <!-- e: tab10-content -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- e: 회원사관리-->
+            <hr />
+
+            <!---------------- e: 실사용 영역 ---------------->
+        </main>
+
+        <!-- 모달 레이어 팝업 -->
+        <div id="simpleModal" class="modal">
+            <div class="modal-content-wrap">
+                <!-- 닫기 버튼 -->
+                <span class="close-button" id="closeModalBtn">&times;</span>
+
+                <h2>모달 팝업 제목</h2>
+                <p>이것은 모달 레이어 팝업의 내용입니다.</p>
+                <p>여기에 중요한 정보나 사용자에게 필요한 UI 요소를 배치할 수 있습니다. 바깥 배경을 클릭하거나 우측 상단의 X 버튼을 누르면 팝업이 닫힙니다.</p>
+                <button onclick="closeModal()" class="close-btn-bottom">확인 및 닫기</button>
+            </div>
+        </div>
+
+        <script>
+            // DOM 요소 가져오기
+            const modal = document.getElementById("simpleModal");
+            const openBtn = document.getElementById("openModalBtn");
+            const closeBtn = document.getElementById("closeModalBtn");
+            const modalContent = modal.querySelector(".modal-content-wrap");
+
+            // 1. 모달 열기 함수
+            function openModal(event) {
+                // a 태그의 기본 동작(페이지 상단으로 이동) 방지
+                event.preventDefault();
+                modal.classList.add("is-visible");
+            }
+
+            // 2. 모달 닫기 함수
+            function closeModal() {
+                modal.classList.remove("is-visible");
+            }
+
+            // 3. 이벤트 리스너 설정
+
+            // 팝업 버튼 클릭 시 모달 열기
+            openBtn.addEventListener("click", openModal);
+
+            // 닫기 버튼 클릭 시 모달 닫기
+            closeBtn.addEventListener("click", closeModal);
+
+            // 모달 바깥 배경 클릭 시 모달 닫기
+            modal.addEventListener("click", function (event) {
+                // event.target이 모달 오버레이(배경) 그 자체일 때만 닫는다.
+                // 모달 내용(modalContent)를 클릭했을 때는 닫지 않는다.
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // ESC 키를 눌렀을 때 모달 닫기
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape" && modal.classList.contains("is-visible")) {
+                    closeModal();
+                }
+            });
+        </script>
+    </body>
+</html>

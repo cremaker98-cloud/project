@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Bootstrap --->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+        <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+
+        <link rel="stylesheet" href="assets/css/datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/select.datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/kha-prc.css" />
+
+        <title>업무전산-회원관리-기타</title>
+    </head>
+
+    <body>
+        <main class="prcContainer">
+            <!--// <h3>:참고용 타이틀,<br/>,<hr />(class 없는 순수 hr)은 단순 경계를 나누기 위한 코드입니다. 필요한 영역만 사용!! -->
+            <h3>인수합병등록</h3>
+            <br />
+
+            <!---------------- s: 실사용 영역 ---------------->
+
+            <!-- s: 인수합병등록-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>처리여부</th>
+                                    <td>
+                                        <select>
+                                            <option>전체</option>
+                                            <option>가입회원사</option>
+                                            <option>탈퇴회원사</option>
+                                        </select>
+                                    </td>
+                                    <th>합병일자</th>
+                                    <td>
+                                        <div class="date-picker">
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                            <span>~</span>
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색어</th>
+                                    <td colspan="3">
+                                        <div class="flexBox">
+                                            <select>
+                                                <option>업체명</option>
+                                            </select>
+                                            <input type="text" class="flex1" placeholder="조회할 내용을 입력해주세요." />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="prc-wrapper">
+                <div class="list-body">
+                    <div class="dataTables_wrapper no-footer">
+                        <div class="tb-top">
+                            <div class="dataTables_info">
+                                <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                            </div>
+                            <div class="dataTables_length" id="boardTable_length">
+                                <label>
+                                    <select class="sel-tool-1">
+                                        <option value="10">10개씩</option>
+                                        <option value="20">20개씩</option>
+                                        <option value="30">30개씩</option>
+                                        <option value="40">40개씩</option>
+                                        <option value="50">50개씩</option>
+                                        <option value="100">100개씩</option>
+                                        <option value="1000">1천개씩</option>
+                                        <option value="10000">1만개씩</option>
+                                        <option value="100000">10만개씩</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="dt-buttons">
+                                <button class="dt-button buttons-excel buttons-html5 btn-tool-1" tabindex="0" aria-controls="boardTable" type="button" id="excelDownLoadButton"><span>엑셀다운로드</span></button>
+                            </div>
+                        </div>
+
+                        <div class="tb-body">
+                            <table class="tb-1 no-footer dataTable">
+                                <colgroup>
+                                    <col style="width: 8%" />
+                                    <col style="width: 15%" />
+                                    <col style="width: 12%" />
+                                    <col style="width: 20%" />
+                                    <col style="width: 20%" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>변경일</th>
+                                        <th>구분</th>
+                                        <th>변경전</th>
+                                        <th>변경후</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>53</td>
+                                    <td>2025-11-21 14:21:59</td>
+                                    <td>대표자</td>
+                                    <td>한승구, 오태식, 윤길호</td>
+                                    <td>한승구, 오태식</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>52</td>
+                                    <td>2025-11-21 14:21:59</td>
+                                    <td>소재지</td>
+                                    <td>대구광역시 서구 월평중로 21</td>
+                                    <td>대전광역시 서구 문정로 48번길 3 태광</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="noData">등록 또는 조회 데이터가 없습니다.</div>
+
+                        <div class="dataTables_paginate paging_simple_numbers" id="boardTable_paginate">
+                            <a class="paginate_button previous disabled" aria-controls="boardTable" data-dt-idx="0" tabindex="-1" id="boardTable_previous">Previous</a>
+                            <span><a class="paginate_button current" aria-controls="boardTable" data-dt-idx="1" tabindex="0">1</a></span>
+                            <a class="paginate_button next disabled" aria-controls="boardTable" data-dt-idx="2" tabindex="-1" id="boardTable_next">Next</a>
+                        </div>
+
+                        <div class="btn-box">
+                            <button class="btn-3">등록</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div>
+                    <div>
+                        <table class="tb-p-1">
+                            <colgroup>
+                                <col style="width: 120px" />
+                                <col style="width: auto" />
+                                <col style="width: 120px" />
+                                <col style="width: auto" />
+                            </colgroup>
+                            <tr>
+                                <th class="check">업체명</th>
+                                <td>
+                                    <div class="flexBox">
+                                        <input type="text" class="flex1 inactive" />
+                                        <button id="openModalBtn" class="btn-intable2">회원사선택</button>
+                                    </div>
+                                </td>
+                                <th class="check">합병업체명</th>
+                                <td>
+                                    <div class="flexBox">
+                                        <input type="text" class="flex1 inactive" />
+                                        <button class="btn-intable2">회원사선택</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>탈퇴일자</th>
+                                <td>
+                                    <div class="date-picker">
+                                        <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                    </div>
+                                </td>
+                                <th class="check">합병일자</th>
+                                <td>
+                                    <div class="date-picker">
+                                        <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="check">처리여부</th>
+                                <td>미처리</td>
+                                <th class="check">실적복사</th>
+                                <td>
+                                    <button class="btn-intable2">복사</button>
+                                    <button class="btn-intable2 disable">복사</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비고</th>
+                                <td colspan="3">
+                                    <textarea rows="5"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="btn-box">
+                        <button class="btn-4">목록</button>
+                        <button class="btn-2">삭제</button>
+                        <button class="btn-3">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 인수합병등록-->
+
+            <hr />
+
+            <h3>기본정보조회</h3>
+            <br />
+
+            <!-- s: 기본정보조회-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: 25%" />
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>설립일</th>
+                                    <td>
+                                        <div class="date-picker">
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                            <span>~</span>
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                        </div>
+                                    </td>
+                                    <th>등록일</th>
+                                    <td>
+                                        <div class="date-picker">
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                            <span>~</span>
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                        </div>
+                                    </td>
+                                    <th>가입일</th>
+                                    <td>
+                                        <div class="date-picker">
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                            <span>~</span>
+                                            <input type="text" class="tb-ip-1 datePicker hasDatepicker" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>회원상황</th>
+                                    <td>
+                                        <div class="custom-select-wrapper">
+                                            <button type="button" class="select-toggle-btn">
+                                                <span>전체</span>
+                                            </button>
+                                            <div class="checkbox-dropdown">
+                                                <label><input type="checkbox" /><span>정상</span></label>
+                                                <label><input type="checkbox" /><span>자격정지</span></label>
+                                                <label><input type="checkbox" /><span>피흡수합병</span></label>
+                                                <label><input type="checkbox" /><span>주소불명</span></label>
+                                                <label><input type="checkbox" /><span>탈퇴</span></label>
+                                                <label><input type="checkbox" /><span>자격상실</span></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th>경영상태</th>
+                                    <td>
+                                        <div class="custom-select-wrapper">
+                                            <button type="button" class="select-toggle-btn">
+                                                <span>전체</span>
+                                            </button>
+                                            <div class="checkbox-dropdown">
+                                                <label><input type="checkbox" /><span>정상</span></label>
+                                                <label><input type="checkbox" /><span>파산</span></label>
+                                                <label><input type="checkbox" /><span>워크아웃</span></label>
+                                                <label><input type="checkbox" /><span>법정관리</span></label>
+                                                <label><input type="checkbox" /><span>은행관리</span></label>
+                                                <label><input type="checkbox" /><span>회의</span></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th>탈퇴구분</th>
+                                    <td>
+                                        <div class="flexBox">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                            &nbsp;
+                                            <div>
+                                                <input type="checkbox" id="house" />
+                                                <label for="house">주택</label>
+                                                <input type="checkbox" id="land" />
+                                                <label for="land">대지</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색어</th>
+                                    <td colspan="5">
+                                        <div class="flexBox">
+                                            <select>
+                                                <option>업체명</option>
+                                            </select>
+                                            <input type="text" class="flex1" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+                <script>
+                    // 모든 커스텀 셀렉트 박스 요소를 찾습니다.
+                    const wrappers = document.querySelectorAll(".custom-select-wrapper");
+
+                    wrappers.forEach((wrapper) => {
+                        const btn = wrapper.querySelector(".select-toggle-btn");
+                        const dropdown = wrapper.querySelector(".checkbox-dropdown");
+
+                        // 버튼 클릭 시 드롭다운 토글
+                        btn.addEventListener("click", (e) => {
+                            // 이벤트 전파 방지 및 기본 동작 차단
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            const isOpen = dropdown.classList.contains("is-open");
+
+                            // 1. 모든 드롭다운을 닫습니다.
+                            closeAllDropdowns();
+
+                            // 2. 현재 클릭한 박스만 토글합니다.
+                            if (!isOpen) {
+                                dropdown.classList.add("is-open");
+                                btn.classList.add("is-active");
+                            }
+                        });
+
+                        // 체크박스 클릭 시 드롭다운이 닫히지 않도록 방지
+                        dropdown.addEventListener("click", (e) => {
+                            e.stopPropagation();
+                        });
+                    });
+
+                    // 모든 드롭다운을 닫는 공통 함수
+                    function closeAllDropdowns() {
+                        document.querySelectorAll(".checkbox-dropdown").forEach((d) => d.classList.remove("is-open"));
+                        document.querySelectorAll(".select-toggle-btn").forEach((b) => b.classList.remove("is-active"));
+                    }
+
+                    // 바탕화면(바깥쪽) 클릭 시 모든 드롭다운 닫기
+                    document.addEventListener("click", (e) => {
+                        if (!e.target.closest(".custom-select-wrapper")) {
+                            closeAllDropdowns();
+                        }
+                    });
+                </script>
+            </div>
+            <!-- e: 기본정보조회-->
+
+            <hr />
+
+            <h3>임원목록조회</h3>
+            <br />
+
+            <!-- s: 임원목록조회-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>검색어</th>
+                                    <td>
+                                        <div class="flexBox">
+                                            <select>
+                                                <option>업체명</option>
+                                            </select>
+                                            <input type="text" class="flex1" placeholder="조회할 내용을 입력해주세요." />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+
+                <div class="list-body">
+                    <div class="dataTables_wrapper no-footer">
+                        <div class="tb-top">
+                            <div class="dataTables_info">
+                                <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                            </div>
+                            <div class="dataTables_length" id="boardTable_length">
+                                <label>
+                                    <select class="sel-tool-1">
+                                        <option value="10">10개씩</option>
+                                        <option value="20">20개씩</option>
+                                        <option value="30">30개씩</option>
+                                        <option value="40">40개씩</option>
+                                        <option value="50">50개씩</option>
+                                        <option value="100">100개씩</option>
+                                        <option value="1000">1천개씩</option>
+                                        <option value="10000">1만개씩</option>
+                                        <option value="100000">10만개씩</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="dt-buttons">
+                                <button class="dt-button buttons-excel buttons-html5 btn-tool-1" tabindex="0" aria-controls="boardTable" type="button" id="excelDownLoadButton"><span>엑셀다운로드</span></button>
+                            </div>
+                        </div>
+
+                        <div class="tb-body">
+                            <table class="tb-1 no-footer dataTable">
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: 15%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>업체명</th>
+                                        <th>성명</th>
+                                        <th>직위</th>
+                                        <th>
+                                            주민등록번호
+                                            <p><input type="checkbox" id="view" /><label for="view" class="mglSmall">번호표시</label></p>
+                                        </th>
+                                        <th>입사일</th>
+                                        <th>퇴사일</th>
+                                        <th>협회직책</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>53</td>
+                                    <td>(주)경남기업</td>
+                                    <td>스티븐승욱최</td>
+                                    <td>이사</td>
+                                    <td>******-*******</td>
+                                    <td>2007.04.04</td>
+                                    <td>2008.04.04</td>
+                                    <td></td>
+                                    <td>미합중국인</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="noData">등록 또는 조회 데이터가 없습니다.</div>
+
+                        <div class="dataTables_paginate paging_simple_numbers" id="boardTable_paginate">
+                            <a class="paginate_button previous disabled" aria-controls="boardTable" data-dt-idx="0" tabindex="-1" id="boardTable_previous">Previous</a>
+                            <span><a class="paginate_button current" aria-controls="boardTable" data-dt-idx="1" tabindex="0">1</a></span>
+                            <a class="paginate_button next disabled" aria-controls="boardTable" data-dt-idx="2" tabindex="-1" id="boardTable_next">Next</a>
+                        </div>
+
+                        <div class="btn-box">
+                            <button class="btn-3">등록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 임원목록조회-->
+
+            <hr />
+
+            <!-- s: 가입탈퇴현황-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>구분</th>
+                                    <td><input type="radio" id="in" /><label id="in">가입</label> <input type="radio" id="out" /><label id="out">탈퇴</label></td>
+                                    <th>기준년도</th>
+                                    <td>
+                                        <select>
+                                            <option>2025년</option>
+                                        </select>
+                                        <span> ~ </span>
+                                        <select>
+                                            <option>2025년</option>
+                                        </select>
+                                        <p class="checkMsg">최대 10년까지 검색 가능합니다.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+
+                <div class="tab-container">
+                    <!-- s: Tab-menu -->
+                    <input type="radio" name="tabs" id="tab1" checked />
+                    <input type="radio" name="tabs" id="tab2" />
+
+                    <div class="tab-menu">
+                        <label for="tab1">가입회원사</label>
+                        <label for="tab2">회원사가입현황</label>
+                    </div>
+
+                    <!-- s: tab1-content -->
+                    <div class="tab-content">
+                        <div id="content1" class="item">
+                            <div class="list-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="tb-top">
+                                        <div></div>
+                                        <div class="dt-buttons">
+                                            <button class="dt-button buttons-excel buttons-html5 btn-tool-1" tabindex="0" aria-controls="boardTable" type="button" id="excelDownLoadButton"><span>엑셀다운로드</span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="tb-body">
+                                        <table class="tb-1 no-footer dataTable">
+                                            <colgroup>
+                                                <col style="width: auto" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <th>2016년</th>
+                                                    <th>2017년</th>
+                                                    <th>2018년</th>
+                                                    <th>2019년</th>
+                                                    <th>2020년</th>
+                                                    <th>2021년</th>
+                                                    <th>2022년</th>
+                                                    <th>2023년</th>
+                                                    <th>2024년</th>
+                                                    <th>2025년</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td>서울</td>
+                                                <td>(주)한국토지신탁</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: tab1-content -->
+
+                        <!-- s: tab2-content -->
+                        <div id="content2" class="item">
+                            <div class="list-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="tb-top">
+                                        <div></div>
+                                        <div class="dt-buttons">
+                                            <button class="dt-button buttons-excel buttons-html5 btn-tool-1" tabindex="0" aria-controls="boardTable" type="button" id="excelDownLoadButton"><span>엑셀다운로드</span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="tb-body">
+                                        <table class="tb-1 no-footer dataTable">
+                                            <colgroup>
+                                                <col style="width: auto" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                                <col style="width: 9.2%" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <th>2016년</th>
+                                                    <th>2017년</th>
+                                                    <th>2018년</th>
+                                                    <th>2019년</th>
+                                                    <th>2020년</th>
+                                                    <th>2021년</th>
+                                                    <th>2022년</th>
+                                                    <th>2023년</th>
+                                                    <th>2024년</th>
+                                                    <th>2025년</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td class="totalCount">계</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                                <td class="totalCount">5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>서울</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>5</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: tab2-content -->
+                    </div>
+                </div>
+            </div>
+            <!-- e: 가입탈퇴현황-->
+
+            <!---------------- e: 실사용 영역 ---------------->
+        </main>
+
+        <!-- 모달 레이어 팝업 -->
+        <div id="simpleModal" class="modal">
+            <div class="modal-content-wrap">
+                <!-- 닫기 버튼 -->
+                <span class="close-button" id="closeModalBtn">&times;</span>
+
+                <h2>회원사 선택</h2>
+                <div class="prc-wrapper">
+                    <div class="list-top">
+                        <form>
+                            <div>
+                                <table class="tb-p-1">
+                                    <colgroup>
+                                        <col style="width: 120px" />
+                                        <col style="width: 25%" />
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>구분</th>
+                                        <td>
+                                            <select>
+                                                <option>전체</option>
+                                                <option>가입회원사</option>
+                                                <option>탈퇴회원사</option>
+                                            </select>
+                                        </td>
+                                        <th>검색어</th>
+                                        <td>
+                                            <div class="flexBox">
+                                                <select>
+                                                    <option>업체명</option>
+                                                </select>
+                                                <input type="text" class="flex1" placeholder="조회할 내용을 입력해주세요." />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <button class="btn-m-1">검색</button>
+                            <button class="btn-m-2">초기화</button>
+                        </form>
+                    </div>
+
+                    <div class="list-body">
+                        <div class="dataTables_wrapper no-footer">
+                            <div class="tb-top">
+                                <div class="dataTables_info">
+                                    <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                                </div>
+                                <div class="dataTables_length" id="boardTable_length">
+                                    <label>
+                                        <select class="sel-tool-1">
+                                            <option value="10">10개씩</option>
+                                            <option value="20">20개씩</option>
+                                            <option value="30">30개씩</option>
+                                            <option value="40">40개씩</option>
+                                            <option value="50">50개씩</option>
+                                            <option value="100">100개씩</option>
+                                            <option value="1000">1천개씩</option>
+                                            <option value="10000">1만개씩</option>
+                                            <option value="100000">10만개씩</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="tb-body">
+                                <table class="tb-1 no-footer dataTable">
+                                    <colgroup>
+                                        <col style="width: 4%" />
+                                        <col style="width: 4%" />
+                                        <col style="width: 10%" />
+                                        <col style="width: 14%" />
+                                        <col style="width: 10%" />
+                                        <col style="width: 8%" />
+                                        <col style="width: 12%" />
+                                        <col style="width: 6%" />
+                                        <col style="width: 6%" />
+                                        <col style="width: 10%" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>선택</th>
+                                            <th>No.</th>
+                                            <th>업체명</th>
+                                            <th>등록번호</th>
+                                            <th>대표자</th>
+                                            <th>회원코드</th>
+                                            <th>법인번호</th>
+                                            <th>경영상태</th>
+                                            <th>회원상황</th>
+                                            <th>전화번호</th>
+                                            <th>주소</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td><input type="radio" /></td>
+                                        <td>53</td>
+                                        <td>(주)건영</td>
+                                        <td>전라남도-주택2006-004</td>
+                                        <td>이형수, 김종은</td>
+                                        <td>19810001</td>
+                                        <td>110111-0221202</td>
+                                        <td>정상</td>
+                                        <td>정상</td>
+                                        <td>02-3216-5498</td>
+                                        <td>서울 특별시 주소구 주소동 111-111</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <p class="checkMsg">업체를 선택해주세요.</p>
+
+                            <div class="noData">등록 또는 조회 데이터가 없습니다.</div>
+
+                            <div class="dataTables_paginate paging_simple_numbers" id="boardTable_paginate">
+                                <a class="paginate_button previous disabled" aria-controls="boardTable" data-dt-idx="0" tabindex="-1" id="boardTable_previous">Previous</a>
+                                <span><a class="paginate_button current" aria-controls="boardTable" data-dt-idx="1" tabindex="0">1</a></span>
+                                <a class="paginate_button next disabled" aria-controls="boardTable" data-dt-idx="2" tabindex="-1" id="boardTable_next">Next</a>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="btn-2 close-btn-bottom" onclick="closeModal()">닫기</button>
+                                <button class="btn-3">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 모달 레이어 팝업 -->
+
+        <script>
+            // DOM 요소 가져오기
+            const modal = document.getElementById("simpleModal");
+            const openBtn = document.getElementById("openModalBtn");
+            const closeBtn = document.getElementById("closeModalBtn");
+            const modalContent = modal.querySelector(".modal-content-wrap");
+
+            // 모달 열기 함수
+            function openModal(event) {
+                // a 태그의 기본 동작(페이지 상단으로 이동) 방지
+                event.preventDefault();
+                modal.classList.add("is-visible");
+            }
+            // 모달 닫기 함수
+            function closeModal() {
+                modal.classList.remove("is-visible");
+            }
+            // 팝업 버튼 클릭 시 모달 열기
+            openBtn.addEventListener("click", openModal);
+            // 닫기 버튼 클릭 시 모달 닫기
+            closeBtn.addEventListener("click", closeModal);
+            // 모달 바깥 배경 클릭 시 모달 닫기
+            modal.addEventListener("click", function (event) {
+                // event.target이 모달 오버레이(배경) 그 자체일 때만 닫는다.
+                // 모달 내용(modalContent)를 클릭했을 때는 닫지 않는다.
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+            // ESC 키를 눌렀을 때 모달 닫기
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape" && modal.classList.contains("is-visible")) {
+                    closeModal();
+                }
+            });
+        </script>
+    </body>
+</html>

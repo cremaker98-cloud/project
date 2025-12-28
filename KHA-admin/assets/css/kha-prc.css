@@ -1,5 +1,497 @@
 @charset "UTF-8";
 
+.prcContainer {
+    padding: 60px 100px;
+}
+.prcContainer h4 {
+    font-size: 16px;
+    color: #999;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/****************** s: 실사용영역 ******************/
+.prc-wrapper {
+    font-size: 13px;
+}
+.prc-wrapper input[type="text"],
+.prc-wrapper input[type="password"] {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto;
+    height: 32px;
+    vertical-align: middle;
+    border-radius: 3px;
+    border: 1px solid #a4a9b1;
+}
+.prc-wrapper select {
+    padding-left: 13px;
+    width: auto;
+    box-sizing: border-box;
+    height: 32px;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #212121;
+    border-radius: 3px;
+    border: 1px solid #a4a9b1;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-size: 11px 7px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-image: url(../img/arrow.select.1.png);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 34px !important;
+    padding-left: 10px !important;
+}
+.prc-wrapper textarea {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #a4a9b1;
+}
+
+.prc-wrapper table label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.multiOpt input[type="text"] {
+    max-width: 40%;
+}
+
+.date-picker input[type="text"] {
+    width: 90px;
+}
+
+th.check::after {
+    content: "*";
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* 탭 메뉴 스타일링 */
+.tab-container {
+    margin-top: 35px;
+}
+input[name="tabs"] {
+    display: none;
+}
+.tab-menu {
+    position: relative;
+    display: flex;
+    gap: 3px;
+    font-size: 1rem;
+}
+.tab-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+    z-index: -1;
+}
+.tab-menu label {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #555;
+    padding-bottom: 2px;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tab-content .item {
+    display: none;
+    border: 1px solid #fff;
+    border-top: none;
+}
+#tab1:checked ~ .tab-menu label[for="tab1"],
+#tab2:checked ~ .tab-menu label[for="tab2"],
+#tab3:checked ~ .tab-menu label[for="tab3"],
+#tab4:checked ~ .tab-menu label[for="tab4"],
+#tab5:checked ~ .tab-menu label[for="tab5"],
+#tab6:checked ~ .tab-menu label[for="tab6"],
+#tab7:checked ~ .tab-menu label[for="tab7"],
+#tab8:checked ~ .tab-menu label[for="tab8"],
+#tab9:checked ~ .tab-menu label[for="tab9"],
+#tab10:checked ~ .tab-menu label[for="tab10"] {
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #555;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+}
+#tab1:checked ~ .tab-content #content1,
+#tab2:checked ~ .tab-content #content2,
+#tab3:checked ~ .tab-content #content3,
+#tab4:checked ~ .tab-content #content4,
+#tab5:checked ~ .tab-content #content5,
+#tab6:checked ~ .tab-content #content6,
+#tab7:checked ~ .tab-content #content7,
+#tab8:checked ~ .tab-content #content8,
+#tab9:checked ~ .tab-content #content9,
+#tab10:checked ~ .tab-content #content10 {
+    display: block;
+}
+
+.checkForm {
+    padding-bottom: 20px;
+}
+.checkForm > dl {
+    display: flex;
+    gap: 10px;
+}
+.checkForm > dl > dt > input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+}
+.errorMsg {
+    color: #cc0000;
+    margin: 6px 0 0 32px;
+}
+.checkMsg {
+    color: #cc0000;
+    margin: 6px 0;
+}
+.addMember {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.addMember > p {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.noData {
+    font-size: 1rem;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+/*** Custom Selectbox(checkbox 포함) ***/
+.custom-select-wrapper {
+    position: relative;
+    width: 170px;
+}
+.select-toggle-btn {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #a4a9b1;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+.select-toggle-btn:hover {
+    border-color: #a4a9b1;
+}
+.select-toggle-btn::after {
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #a4a9b1;
+    transition: transform 0.3s;
+}
+.select-toggle-btn.is-active::after {
+    transform: rotate(180deg);
+}
+.checkbox-dropdown {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #a4a9b1;
+    border-radius: 6px;
+    display: none;
+    z-index: 100;
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.checkbox-dropdown.is-open {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.checkbox-dropdown label {
+    display: flex !important;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.checkbox-dropdown label:hover {
+    background-color: var(--bg-hover);
+}
+.checkbox-dropdown input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/*** 팝업 스타일 ***/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+}
+.modal-content-wrap {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 90%;
+    width: auto;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-out; /* 등장 애니메이션 */
+}
+.modal-content-wrap h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0e5aac;
+    margin: 0 0 20px 0;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.modal.is-visible {
+    display: flex;
+}
+.close-btn-bottom {
+    padding: 8px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/*** 버튼 스타일 ***/
+.btn-intable1,
+.btn-intable2 {
+    display: inline-block;
+    color: #fff;
+    min-height: 32px;
+    border-radius: 3px;
+    padding: 0 10px;
+}
+.btn-intable1 {
+    background-color: #267bd6;
+}
+.btn-intable2 {
+    background-color: #525c68;
+}
+.btn-s1 {
+    display: inline-block;
+    color: #fff;
+    line-height: 1.8rem;
+    background-color: #267bd6;
+    border: 1px solid #267bd6;
+    padding: 0 16px;
+}
+.btn-s2 {
+    display: inline-block;
+    color: #ff3636;
+    line-height: 1.8rem;
+    background-color: #fff;
+    border: 1px solid #ff5555;
+    padding: 0 16px;
+}
+.disable {
+    color: #ddd !important;
+    background-color: #999 !important;
+    cursor: default !important;
+}
+
+/*** common ***/
+.flexBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.flexBox .flex1 {
+    flex: 1;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+input.fullWidth {
+    width: 100% !important;
+}
+input.smallWidth {
+    width: 150px !important;
+}
+
+.inactive {
+    background-color: #e5e5e5 !important;
+}
+.bullet {
+    display: flex;
+    gap: 4px;
+}
+.bullet::before {
+    content: "·";
+    font-weight: bold;
+    display: inline-block;
+}
+
+hr {
+    height: 30px;
+    margin-top: 45px;
+    border-style: dashed;
+    border-color: #ccc;
+}
+button {
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.empty {
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+}
+.mgb5 {
+    margin-bottom: 5px;
+}
+.mgt10 {
+    margin-top: 10px;
+}
+.mgt30 {
+    margin-top: 30px;
+}
+.mglSmall {
+    margin-left: 3px;
+}
+
+/*** 기존 css(common.css) 속성 수정 ***/
+.btn-box {
+    margin: 30px 0;
+}
+.dataTables_wrapper .dataTables_length select.sel-tool-1 {
+    height: 40px !important;
+}
+table.dataTable thead th,
+table.dataTable thead td {
+    padding: 10px 5px;
+}
+table.dataTable tbody td.totalCount {
+    font-weight: 500;
+    color: #a82a2a;
+    background-color: #fff0d9;
+}
+.tb-p-1 th {
+    padding-left: 15px;
+}
+.tb-1 thead th,
+.tb-1 tbody td {
+    border-left: none;
+}
+.date-picker > input + span {
+    margin: 0 4px;
+}
+@media screen and (min-width: 768px) {
+    .list-top form > div {
+        overflow-x: initial;
+    }
+}
+
+/******** e: 실사용영역 **********/
+
+/* 이미지 경로를 위해 사용: 기존 소스 활용하여 개발시 사용하지 않아도 괜찮습니다. */
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover {
+    background: url(../img/left.arrow.png) 8px 15px no-repeat;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
+    background: url(../img/right.arrow.png) 8px 15px no-repeat;
+}
+
+/*
+.prcWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
 .searchArea {
     display: flex;
     justify-content: space-between;
@@ -47,3 +539,56 @@
     background-color: #ccc;
     border-radius: 5px;
 }
+
+.searchBox {
+    display: flex;
+    gap: 10px;
+}
+
+.search-option {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+}
+.search-option::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+.search-option dl {
+    display: flex;
+    width: 33%;
+    border-bottom: 1px solid #ccc;
+}
+.search-option dl dt {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    background-color: #f0f0f0;
+    padding-left: 14px;
+}
+.search-option dl dt::before {
+    content: "· ";
+    display: inline-block;
+    font-weight: 900;
+    margin-right: 4px;
+}
+.search-option dl dd {
+    flex: 1;
+    padding: 10px;
+}
+
+.search-btn {
+    display: flex;
+    gap: 5px;
+    width: 250px;
+}
+.search-btn .btnForm {
+    flex: 1;
+}
+*/

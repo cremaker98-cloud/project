@@ -1475,6 +1475,183 @@ dl.detail > dd > ul > li {
     display: none;
 }
 
+.yearArea {
+    display: flex;
+    margin-top: 40px;
+}
+.year-img-area > img {
+    width: 100%;
+}
+.yearTab .tab-list {
+    flex-direction: column;
+    gap: 10px;
+}
+.yearTab .tab-list > li {
+    display: flex;
+    height: 70px;
+}
+.yearTab .tab-list > li > a {
+    font-weight: 700;
+    color: #aaa;
+    width: 180px;
+    background-color: #f2f2f2;
+    border-radius: 6px !important;
+}
+.yearTab .tab-list > li.active > a {
+    background-color: var(--menu-color);
+    color: #fff;
+    border-radius: 6px 0 0 6px !important;
+}
+.yearTab .tab-list > li::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 70px;
+}
+.yearTab .tab-list > li.active::after {
+    background: url(../img/history-arrow.svg) no-repeat left center;
+    background-size: cover;
+}
+.yearTab .tab-list > li::before {
+    display: none;
+}
+.year-detail {
+    padding: 0 30px;
+}
+.year-detail > ul > li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 10px 0;
+}
+.year-detail > ul > li > strong {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 140px;
+}
+.year-detail > ul > li > strong::before {
+    content: "· ";
+    display: inline-block;
+    font-weight: 900;
+    color: var(--menu-color);
+    margin-right: 3px;
+}
+
+.ciArea > div {
+    font-size: var(--basic-font);
+    line-height: 160%;
+    margin: 50px 0;
+}
+.ciArea > div h3 {
+    font-size: var(--mdbig-font);
+    padding: 15px 0;
+}
+.ciArea ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ci-info .img-box {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 50px 0;
+}
+.ci-info > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 80px 0;
+}
+.ci-info .better {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.ci-info .spWord {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+.ciTab {
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+.ciTab .tab-list li {
+    flex: 1;
+}
+.ci-mark > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+.ci-sign {
+    margin: 50px 0;
+}
+.ci-sign li {
+    margin-bottom: 30px;
+}
+.ci-color {
+    margin: 50px 0;
+}
+.ci-color .colorRule {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.ci-color .colorRule dl {
+    padding: 30px 0;
+}
+.ci-color .colorRule > li {
+    width: 48%;
+}
+.ci-color .colorRule > li dt {
+    font-weight: 700;
+    padding-left: 26px;
+    margin-bottom: 20px;
+}
+.ci-color .colorRule > li dd {
+    display: flex;
+    justify-content: space-around;
+    font-size: var(--default-font);
+}
+.ci-color .colorRule > li dd strong {
+    display: block;
+}
+.ci-usage {
+    justify-content: space-between;
+}
+.ci-usage li {
+    width: 32%;
+    margin-top: 15px;
+    text-align: center;
+}
+.ci-usage li > p {
+    font-size: var(--default-font);
+    padding: 12px 0 0 0;
+}
+.ci-usage .dont h4 {
+    font-size: var(--default-font);
+    font-weight: 500;
+}
+.ci-usage .dont li {
+    width: 49%;
+}
+.ci-usage .dont li > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 215px;
+    border: 1px solid #ddd;
+}
+.ci-ex > ul > li {
+    width: 49%;
+}
+.ci-ex li > img {
+    width: 100%;
+}
+
 /**/
 .hpLink {
     display: inline-block;

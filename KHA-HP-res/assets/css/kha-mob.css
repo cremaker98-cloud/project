@@ -360,6 +360,51 @@
         height: 30px;
     }
 
+    .yearArea {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .yearTab .tab-list {
+        flex-direction: row;
+        gap: 2px;
+    }
+    .yearTab .tab-list > li {
+        flex: 1;
+        height: 60px;
+    }
+    .yearTab .tab-list > li > a {
+        flex-direction: column;
+        width: auto;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    .yearTab .tab-list > li.active > a {
+        border-radius: 6px !important;
+    }
+    .yearTab .tab-list > li::after {
+        display: none;
+    }
+    .yearTab .tab-list a strong {
+        display: block;
+        font-weight: 700;
+        padding: 0;
+    }
+    .year-detail {
+        padding: 16px 10px 0;
+    }
+    .year-detail > ul > li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    .year-detail > ul > li > strong {
+        width: 100px;
+    }
+    .year-detail > ul > li > span {
+        flex: 1;
+    }
+
     .footer-inner {
         width: 100%;
     }
