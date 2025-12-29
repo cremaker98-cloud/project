@@ -262,7 +262,7 @@ input[name="tabs"] {
     background-color: var(--bg-hover);
 }
 .checkbox-dropdown input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px;
     cursor: pointer;
 }
 
@@ -386,7 +386,7 @@ input[name="tabs"] {
 input[type="checkbox"],
 input[type="radio"] {
     vertical-align: middle;
-    margin-bottom: 2px;
+    margin-bottom: 0;
 }
 input.fullWidth {
     width: 100% !important;
@@ -460,12 +460,31 @@ table.dataTable tbody td.totalCount {
 .tb-1 tbody td {
     border-left: none;
 }
+
+.tb-p-1 .tb-1 th,
+.tb-p-1 .tb-1 td {
+    text-align: center !important;
+    padding: 8px 5px !important;
+}
+.tb-p-1 .tb-1 td .date-picker {
+    justify-content: center;
+}
 .date-picker > input + span {
     margin: 0 4px;
+}
+.date-picker input[type="checkbox"] {
+    width: auto;
+    margin-right: 3px;
 }
 @media screen and (min-width: 768px) {
     .list-top form > div {
         overflow-x: initial;
+    }
+    .btn-m-1 {
+        flex-basis: 100px;
+    }
+    .btn-m-2 {
+        flex-basis: 80px;
     }
 }
 

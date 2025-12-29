@@ -176,7 +176,7 @@
                                 <td>
                                     <div class="flexBox">
                                         <input type="text" class="flex1 inactive" />
-                                        <button id="openModalBtn" class="btn-intable2">회원사선택</button>
+                                        <button data-target="#choise-member" class="btn-intable2 open-modal-btn">회원사선택</button>
                                     </div>
                                 </td>
                                 <th class="check">합병업체명</th>
@@ -340,7 +340,7 @@
                     </form>
                 </div>
                 <script>
-                    // 모든 커스텀 셀렉트 박스 요소를 찾습니다.
+                    // 모든 커스텀 셀렉트 박스 요소를 검색
                     const wrappers = document.querySelectorAll(".custom-select-wrapper");
 
                     wrappers.forEach((wrapper) => {
@@ -355,10 +355,10 @@
 
                             const isOpen = dropdown.classList.contains("is-open");
 
-                            // 1. 모든 드롭다운을 닫습니다.
+                            // 1. 모든 드롭다운을 닫기.
                             closeAllDropdowns();
 
-                            // 2. 현재 클릭한 박스만 토글합니다.
+                            // 2. 현재 클릭한 박스만 토글합
                             if (!isOpen) {
                                 dropdown.classList.add("is-open");
                                 btn.classList.add("is-active");
@@ -695,7 +695,7 @@
         </main>
 
         <!-- 모달 레이어 팝업 -->
-        <div id="simpleModal" class="modal">
+        <div id="choise-member" class="modal">
             <div class="modal-content-wrap">
                 <!-- 닫기 버튼 -->
                 <span class="close-button" id="closeModalBtn">&times;</span>
@@ -818,7 +818,7 @@
                             </div>
 
                             <div class="btn-box">
-                                <button class="btn-2 close-btn-bottom" onclick="closeModal()">닫기</button>
+                                <button class="btn-2 close-btn-trigger close-btn-bottom" onclick="closeModal()">닫기</button>
                                 <button class="btn-3">저장</button>
                             </div>
                         </div>
@@ -829,38 +829,60 @@
         <!-- e: 모달 레이어 팝업 -->
 
         <script>
-            // DOM 요소 가져오기
-            const modal = document.getElementById("simpleModal");
-            const openBtn = document.getElementById("openModalBtn");
-            const closeBtn = document.getElementById("closeModalBtn");
-            const modalContent = modal.querySelector(".modal-content-wrap");
+            /**
+             * 범용 모달 제어 스크립트
+             */
+            document.addEventListener("DOMContentLoaded", function () {
+                // 1. 모달 열기 로직
+                const openButtons = document.querySelectorAll(".open-modal-btn");
+                openButtons.forEach((btn) => {
+                    btn.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute("data-target");
+                        const modal = document.querySelector(targetId);
+                        if (modal) {
+                            modal.classList.add("is-visible");
+                            document.body.style.overflow = "hidden"; // 배경 스크롤 방지
+                        }
+                    });
+                });
 
-            // 모달 열기 함수
-            function openModal(event) {
-                // a 태그의 기본 동작(페이지 상단으로 이동) 방지
-                event.preventDefault();
-                modal.classList.add("is-visible");
-            }
-            // 모달 닫기 함수
-            function closeModal() {
-                modal.classList.remove("is-visible");
-            }
-            // 팝업 버튼 클릭 시 모달 열기
-            openBtn.addEventListener("click", openModal);
-            // 닫기 버튼 클릭 시 모달 닫기
-            closeBtn.addEventListener("click", closeModal);
-            // 모달 바깥 배경 클릭 시 모달 닫기
-            modal.addEventListener("click", function (event) {
-                // event.target이 모달 오버레이(배경) 그 자체일 때만 닫는다.
-                // 모달 내용(modalContent)를 클릭했을 때는 닫지 않는다.
-                if (event.target === modal) {
-                    closeModal();
-                }
-            });
-            // ESC 키를 눌렀을 때 모달 닫기
-            document.addEventListener("keydown", function (event) {
-                if (event.key === "Escape" && modal.classList.contains("is-visible")) {
-                    closeModal();
+                // 2. 모달 닫기 로직 (상단 X 버튼 및 하단 닫기 버튼 공통)
+                // 이벤트 위임을 사용하여 동적으로 생성된 요소에도 대응 가능하게 설정
+                document.addEventListener("click", function (e) {
+                    // 닫기 버튼(.close-button) 또는 닫기 트리거(.close-btn-trigger) 클릭 시
+                    if (e.target.classList.contains("close-button") || e.target.classList.contains("close-btn-trigger")) {
+                        const modal = e.target.closest(".modal");
+                        if (modal) {
+                            closeModal(modal);
+                        }
+                    }
+
+                    // 배경 영역 클릭 시 닫기
+                    if (e.target.classList.contains("modal")) {
+                        closeModal(e.target);
+                    }
+                });
+
+                // 3. ESC 키로 닫기
+                document.addEventListener("keydown", function (e) {
+                    if (e.key === "Escape") {
+                        const visibleModal = document.querySelector(".modal.is-visible");
+                        if (visibleModal) {
+                            closeModal(visibleModal);
+                        }
+                    }
+                });
+
+                // 닫기 공통 함수
+                function closeModal(modalElement) {
+                    modalElement.classList.remove("is-visible");
+
+                    // 화면에 열려있는 다른 모달이 없는 경우에만 스크롤 복원
+                    const remainVisible = document.querySelectorAll(".modal.is-visible").length;
+                    if (remainVisible === 0) {
+                        document.body.style.overflow = "";
+                    }
                 }
             });
         </script>
