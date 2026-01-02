@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Bootstrap --->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+        <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+
+        <link rel="stylesheet" href="assets/css/datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/select.datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/kha-prc.css" />
+
+        <title>업무전산-회비관리</title>
+    </head>
+
+    <body>
+        <!-- s: 모달 팝업 모음 -->
+        <div class="prc-wrapper" style="padding: 10px; text-align: center; background-color: #eee">
+            <button class="dt-button open-modal-btn" data-target="#Unannounced"><span>입회비/기본회비 미고지 업체</span></button>
+            <button class="dt-button open-modal-btn" data-target="#fee-paper"><span>고지서 발급</span></button>
+        </div>
+        <!-- e: 모달 팝업 모음 -->
+        <main class="prcContainer">
+            <!--// <h3>:참고용 타이틀,<br/>,<hr />(class 없는 순수 hr)은 단순 경계를 나누기 위한 코드입니다. 필요한 영역만 사용!! -->
+
+            <!---------------- s: 실사용 영역 ---------------->
+
+            <h3>입회비</h3>
+            <br />
+
+            <!-- s: 입회비-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>고지년도</th>
+                                    <td>
+                                        <select>
+                                            <option>2025년</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+
+                <div class="tab-container">
+                    <!-- s: Tab-menu -->
+                    <input type="radio" name="tabs" id="tab1" checked />
+                    <input type="radio" name="tabs" id="tab2" />
+
+                    <div class="tab-menu">
+                        <label for="tab1">고지내역<span>(17)</span></label>
+                        <label for="tab2">미고지내역<span>(35)</span></label>
+                    </div>
+
+                    <!-- s: tab1-content -->
+                    <div class="tab-content">
+                        <div id="content1" class="item">
+                            <div class="list-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="tb-top">
+                                        <div class="dataTables_length" id="boardTable_length">
+                                            <label>
+                                                <select class="sel-tool-1">
+                                                    <option value="10">10개씩</option>
+                                                    <option value="20">20개씩</option>
+                                                    <option value="30">30개씩</option>
+                                                    <option value="40">40개씩</option>
+                                                    <option value="50">50개씩</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="dt-buttons">
+                                            <button class="dt-button btn-tool-1"><span>미고지업체 조회/추가</span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="tb-body">
+                                        <table class="tb-1 no-footer dataTable">
+                                            <colgroup>
+                                                <col style="width: 5%" />
+                                                <col style="width: 15%" />
+                                                <col style="width: 10%" />
+                                                <col style="width: 10%" />
+                                                <col style="width: 13%" />
+                                                <col style="width: 10%" />
+                                                <col style="width: 15%" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>연번</th>
+                                                    <th>업체명</th>
+                                                    <th>고지일</th>
+                                                    <th>고지번호</th>
+                                                    <th>고지금액</th>
+                                                    <th>납기일</th>
+                                                    <th>등록번호</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>계룡건설산업(주)</td>
+                                                <td>1959-09-03</td>
+                                                <td></td>
+                                                <td>5,000,000</td>
+                                                <td>1959-09-03</td>
+                                                <td>경기도-주대2014-023</td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: tab1-content -->
+
+                        <!-- s: tab2-content -->
+                        <div id="content2" class="item">
+                            <div class="list-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="tb-top">
+                                        <div class="dataTables_length" id="boardTable_length">
+                                            <label>
+                                                <select class="sel-tool-1">
+                                                    <option value="10">10개씩</option>
+                                                    <option value="20">20개씩</option>
+                                                    <option value="30">30개씩</option>
+                                                    <option value="40">40개씩</option>
+                                                    <option value="50">50개씩</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="dt-buttons">
+                                            <button class="dt-button btn-tool-1"><span>미고지업체 조회/추가</span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="tb-body">
+                                        <table class="tb-1 no-footer dataTable">
+                                            <colgroup>
+                                                <col style="width: 5%" />
+                                                <col style="width: 15%" />
+                                                <col style="width: 10%" />
+                                                <col style="width: 10%" />
+                                                <col style="width: 13%" />
+                                                <col style="width: 10%" />
+                                                <col style="width: 15%" />
+                                                <col style="width: auto" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>연번</th>
+                                                    <th>업체명</th>
+                                                    <th>고지일</th>
+                                                    <th>고지번호</th>
+                                                    <th>고지금액</th>
+                                                    <th>납기일</th>
+                                                    <th>등록번호</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>건설산업(주)</td>
+                                                <td>1959-09-03</td>
+                                                <td></td>
+                                                <td>5,000,000</td>
+                                                <td>1959-09-03</td>
+                                                <td>경기도-주대2014-023</td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: tab2-content -->
+                    </div>
+                </div>
+            </div>
+            <!-- e: 입회비-->
+
+            <hr />
+
+            <h3>입회비-상세</h3>
+
+            <!-- s: 입회비-상세-->
+            <div class="prc-wrapper">
+                <div class="list-body">
+                    <div>
+                        <table class="tb-p-1">
+                            <colgroup>
+                                <col style="width: 120px" />
+                                <col style="width: auto" />
+                                <col style="width: 120px" />
+                                <col style="width: auto" />
+                            </colgroup>
+                            <tr>
+                                <th class="check">업체명</th>
+                                <td>
+                                    <div class="flexBox">
+                                        <input type="text" class="flex1 inactive" placeholder="계룡건설산업(주)" />
+                                        <button class="btn-intable1">회원사선택</button>
+                                    </div>
+                                </td>
+                                <th>등록번호</th>
+                                <td>197900064</td>
+                            </tr>
+                            <tr>
+                                <th class="check">고지일</th>
+                                <td>
+                                    <div class="date-picker">
+                                        <input type="text" class="datePicker hasDatepicker" />
+                                    </div>
+                                </td>
+                                <th class="check">납기일</th>
+                                <td class="multiOpt">
+                                    <div class="date-picker">
+                                        <input type="text" class="datePicker hasDatepicker" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="check">고지금액</th>
+                                <td class="multiOpt">
+                                    <input type="text" />
+                                    원 &nbsp;
+                                    <button class="btn-intable1">기준액 불러오기</button>
+                                </td>
+                                <th class="check">감면액</th>
+                                <td>
+                                    <input type="text" />
+                                    원
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>고지번호</th>
+                                <td colspan="3">
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비고</th>
+                                <td colspan="3">
+                                    <textarea rows="5"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn-4">목록</button>
+                        <button class="btn-2">삭제</button>
+                        <button class="btn-3">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 입회비-상세-->
+
+            <hr />
+
+            <h3>기본회비</h3>
+
+            <!-- s: 기본회비-->
+            <div class="prc-wrapper">
+                <div class="list-body">
+                    <div class="tb-top">
+                        <div></div>
+                        <div class="dt-buttons">
+                            <button class="dt-button open-modal-btn" data-target="#"><span>고지서</span></button>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="tb-p-1">
+                            <colgroup>
+                                <col style="width: 120px" />
+                                <col style="width: auto" />
+                                <col style="width: 120px" />
+                                <col style="width: auto" />
+                            </colgroup>
+                            <tr>
+                                <th class="check">업체명</th>
+                                <td>
+                                    <div class="flexBox">
+                                        <input type="text" class="flex1 inactive" placeholder="계룡건설산업(주)" />
+                                    </div>
+                                </td>
+                                <th>등록번호</th>
+                                <td>경기도-주택-2010-024</td>
+                            </tr>
+                            <tr>
+                                <th class="check">고지년도</th>
+                                <td>
+                                    <div class="date-picker">
+                                        <input type="text" class="datePicker hasDatepicker" />
+                                    </div>
+                                </td>
+                                <th class="check">분기</th>
+                                <td>
+                                    <select>
+                                        <option>4/4</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="check">고지일</th>
+                                <td>
+                                    <div class="date-picker">
+                                        <input type="text" class="datePicker hasDatepicker" />
+                                    </div>
+                                </td>
+                                <th class="check">납기일</th>
+                                <td>
+                                    <div class="date-picker">
+                                        <input type="text" class="datePicker hasDatepicker" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="check">고지금액</th>
+                                <td class="multiOpt">
+                                    <input type="text" />
+                                    원 &nbsp;
+                                    <button class="btn-intable1">기준액 불러오기</button>
+                                </td>
+                                <th class="check">고지번호</th>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비고</th>
+                                <td colspan="3">
+                                    <textarea rows="5"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn-4">목록</button>
+                        <button class="btn-2">삭제</button>
+                        <button class="btn-3">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 기본회비-->
+
+            <hr />
+
+            <h3>회비별현황</h3>
+            <br />
+
+            <!-- s: 회비별현황-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>구분</th>
+                                    <td>
+                                        <select>
+                                            <option>가입회원사</option>
+                                        </select>
+                                    </td>
+                                    <th>기간</th>
+                                    <td>
+                                        <select>
+                                            <option>2015년</option>
+                                        </select>
+                                        <select>
+                                            <option>1월</option>
+                                        </select>
+                                        <span>~</span>
+                                        <select>
+                                            <option>2025년</option>
+                                        </select>
+                                        <select>
+                                            <option>1월</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>업체명</th>
+                                    <td colspan="3">
+                                        <input type="text" placeholder="업체명을 검색하세요" />
+                                        <input type="checkbox" id="total" class="mglSmall" /><label for="total">전체</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+            </div>
+            <!-- e: 회비별현황-->
+
+            <hr />
+
+            <h3>미수금액총괄</h3>
+            <br />
+
+            <!-- s: 미수금액총괄-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>기준일자</th>
+                                    <td>
+                                        <div class="flexBox">
+                                            <div class="date-picker">
+                                                <input type="text" class="datePicker hasDatepicker" />
+                                            </div>
+                                            <div class="mglSmall"><input type="checkbox" id="pass" /><label for="pass">탈퇴회원사 제외</label></div>
+                                        </div>
+                                        <p class="checkMsg">기간은 최대 10년까지 조회가능합니다.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+            </div>
+            <!-- e: 미수금액총괄-->
+
+            <hr />
+
+            <h3>월별납부현황</h3>
+            <br />
+
+            <!-- s: 월별납부현황-->
+            <div class="prc-wrapper">
+                <div class="list-top">
+                    <form>
+                        <div>
+                            <table class="tb-p-1">
+                                <colgroup>
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                    <col style="width: 120px" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tr>
+                                    <th>구분</th>
+                                    <td>
+                                        <select>
+                                            <option>가입회원사</option>
+                                        </select>
+                                    </td>
+                                    <th>입금일자</th>
+                                    <td>
+                                        <select>
+                                            <option>2015년</option>
+                                        </select>
+                                        <select>
+                                            <option>1월</option>
+                                        </select>
+                                        <span>~</span>
+                                        <select>
+                                            <option>2025년</option>
+                                        </select>
+                                        <select>
+                                            <option>1월</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기준일자</th>
+                                    <td colspan="3">
+                                        <div class="flexBox">
+                                            <select>
+                                                <option>업체명</option>
+                                            </select>
+                                            <input type="text" placeholder="업체명을 입력해주세요" />
+                                            <div class="mglSmall"><input type="checkbox" id="pass" /><label for="pass">탈퇴회원사 제외</label></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="btn-m-1">검색</button>
+                        <button class="btn-m-2">초기화</button>
+                    </form>
+                </div>
+
+                <div class="list-body">
+                    <div class="dataTables_wrapper no-footer">
+                        <div class="tb-top">
+                            <div class="dataTables_info">
+                                <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                            </div>
+                            <div class="dataTables_length" id="boardTable_length">
+                                <label>
+                                    <select class="sel-tool-1">
+                                        <option value="10">10개씩</option>
+                                        <option value="20">20개씩</option>
+                                        <option value="30">30개씩</option>
+                                        <option value="40">40개씩</option>
+                                        <option value="50">50개씩</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="dt-buttons">
+                                <button class="dt-button btn-tool-1"><span>다운로드</span></button>
+                            </div>
+                        </div>
+
+                        <div class="tb-body">
+                            <table class="tb-1 no-footer dataTable">
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>연번</th>
+                                        <th>납입일자</th>
+                                        <th>업체명</th>
+                                        <th>연회비</th>
+                                        <th>기본회비</th>
+                                        <th>통상회비</th>
+                                        <th>계</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1959-09-03</td>
+                                    <td>건설산업(주)</td>
+                                    <td>5,000,000</td>
+                                    <td>5,000,000</td>
+                                    <td>5,000,000</td>
+                                    <td>5,000,000</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="totalCount">
+                                    <td colspan="3">합계</td>
+                                    <td>12,361,5000,000</td>
+                                    <td>12,361,5000,000</td>
+                                    <td>12,361,5000,000</td>
+                                    <td>12,361,5000,000</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 월별납부현황-->
+
+            <hr />
+
+            <h3>연도별고지납부현황</h3>
+
+            <!-- s: 연도별고지납부현황-->
+            <div class="prc-wrapper">
+                <div class="list-body">
+                    <div class="dataTables_wrapper no-footer">
+                        <div class="tb-top">
+                            <div class="dataTables_info">
+                                <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                            </div>
+                            <div class="dataTables_length" id="boardTable_length">
+                                <label>
+                                    <select class="sel-tool-1">
+                                        <option value="10">10개씩</option>
+                                        <option value="20">20개씩</option>
+                                        <option value="30">30개씩</option>
+                                        <option value="40">40개씩</option>
+                                        <option value="50">50개씩</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="dt-buttons">
+                                <button class="dt-button btn-tool-1"><span>다운로드</span></button>
+                            </div>
+                        </div>
+
+                        <div class="tb-body">
+                            <table class="tb-1 no-footer dataTable">
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>연번</th>
+                                        <th>업체명</th>
+                                        <th>기본회비고지금액</th>
+                                        <th>기본회비납입금액</th>
+                                        <th>통상회비고지금액</th>
+                                        <th>통상회비납입금액</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>1</td>
+                                    <td>건설산업(주)</td>
+                                    <td>5,000,000</td>
+                                    <td>5,000,000</td>
+                                    <td>5,000,000</td>
+                                    <td>5,000,000</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="totalCount">
+                                    <td colspan="2">합계</td>
+                                    <td>12,361,5000,000</td>
+                                    <td>12,361,5000,000</td>
+                                    <td>12,361,5000,000</td>
+                                    <td>12,361,5000,000</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 연도별고지납부현황-->
+
+            <hr />
+
+            <h3>통상회비미수현황</h3>
+
+            <!-- s: 통상회비미수현황-->
+            <div class="prc-wrapper">
+                <div class="list-body">
+                    <div class="dataTables_wrapper no-footer">
+                        <div class="tb-top">
+                            <div class="dataTables_info">
+                                <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                            </div>
+                            <div class="dataTables_length" id="boardTable_length">
+                                <label>
+                                    <select class="sel-tool-1">
+                                        <option value="10">10개씩</option>
+                                        <option value="20">20개씩</option>
+                                        <option value="30">30개씩</option>
+                                        <option value="40">40개씩</option>
+                                        <option value="50">50개씩</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="dt-buttons">
+                                <button class="dt-button btn-tool-1"><span>다운로드</span></button>
+                            </div>
+                        </div>
+
+                        <div class="tb-body">
+                            <table class="tb-1 no-footer dataTable">
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>연번</th>
+                                        <th>업체명</th>
+                                        <th>건설위치</th>
+                                        <th>사업승인일</th>
+                                        <th>모집공고일</th>
+                                        <th>연면적</th>
+                                        <th>미수금액</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>1</td>
+                                    <td>건설산업(주)</td>
+                                    <td>인천 연수구 컨벤시아대로 69 송도</td>
+                                    <td>1959-09-03</td>
+                                    <td>1959-09-03</td>
+                                    <td>22.267</td>
+                                    <td>5,000,000</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="totalCount">
+                                    <td colspan="6">합계</td>
+                                    <td>12,361,5000,000</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 통상회비미수현황-->
+
+            <!---------------- e: 실사용 영역 ---------------->
+        </main>
+
+        <!-- 모달 레이어 팝업: 고지서 발급 -->
+        <div id="fee-paper" class="modal">
+            <div class="modal-content-wrap">
+                <!-- 닫기 버튼 -->
+                <span class="close-button">&times;</span>
+
+                <h2>고지서 발급</h2>
+                <div class="prc-wrapper">
+                    <table class="tb-p-1">
+                        <colgroup>
+                            <col style="width: 120px" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <tr>
+                            <th>고지일</th>
+                            <td>
+                                <div class="flexBox">
+                                    <div class="date-picker">
+                                        <input type="text" class="datePicker hasDatepicker" />
+                                    </div>
+                                    <div class="mglMed"><input type="checkbox" id="paper1-off" /> <label for="paper1-off">고지일 표시 안함</label> <input type="checkbox" id="paper1-on" /> <label for="paper1-on">고지일 지정</label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>납기일</th>
+                            <td>
+                                <div class="flexBox">
+                                    <div class="date-picker">
+                                        <input type="text" class="datePicker hasDatepicker" />
+                                    </div>
+                                    <div class="mglMed"><input type="checkbox" id="paper2-off" /> <label for="paper2-off">납기일 표시 안함</label> <input type="checkbox" id="paper2-on" /> <label for="paper2-on">납기일 지정</label></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="btn-box">
+                    <button class="btn-2 close-btn-trigger close-btn-bottom" onclick="closeModal()">닫기</button>
+                    <button class="btn-1">삭제</button>
+                    <button class="btn-3">저장</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 모달 레이어 팝업 -->
+
+        <!-- 모달 레이어 팝업: 기본회비 미고지 업체-->
+        <div id="Unannounced" class="modal">
+            <div class="modal-content-wrap">
+                <!-- 닫기 버튼 -->
+                <span class="close-button">&times;</span>
+
+                <h2>기본회비 미고지 업체</h2>
+                <div class="prc-wrapper">
+                    <div class="list-top">
+                        <form>
+                            <div>
+                                <table class="tb-p-1">
+                                    <colgroup>
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                        <col style="width: 120px" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <tr>
+                                        <th>고지년도</th>
+                                        <td>
+                                            <select>
+                                                <option>2025년</option>
+                                            </select>
+                                        </td>
+                                        <th>탈퇴회원사</th>
+                                        <td><input type="checkbox" id="out" /><label for="out">제외</label></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <button class="btn-m-1">검색</button>
+                            <button class="btn-m-2">초기화</button>
+                        </form>
+                    </div>
+                    <div class="list-body">
+                        <div class="dataTables_wrapper no-footer">
+                            <div class="tb-top">
+                                <div class="dataTables_info">
+                                    <div class="tb-info"><span class="total-count">전체 3개</span><span class="page-info">[1/1]</span></div>
+                                </div>
+                                <div class="dataTables_length" id="boardTable_length">
+                                    <label>
+                                        <select class="sel-tool-1">
+                                            <option value="10">10개씩</option>
+                                            <option value="20">20개씩</option>
+                                            <option value="30">30개씩</option>
+                                            <option value="40">40개씩</option>
+                                            <option value="50">50개씩</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="dt-buttons">
+                                    <button class="dt-button buttons-excel buttons-html5 btn-tool-1" tabindex="0" aria-controls="boardTable" type="button" id="excelDownLoadButton"><span>엑셀다운로드</span></button>
+                                </div>
+                            </div>
+
+                            <div class="tb-body">
+                                <table class="tb-1 no-footer dataTable">
+                                    <colgroup>
+                                        <col style="width: 5%" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                        <col style="width: auto" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>선택</th>
+                                            <th>업체명</th>
+                                            <th>기본회비군</th>
+                                            <th>등록번호</th>
+                                            <th>대표자</th>
+                                            <th>가입일</th>
+                                            <th>경영상태</th>
+                                            <th>회원상황</th>
+                                            <th>탈퇴일자</th>
+                                            <th>회원번호</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>진흥기업(주)</td>
+                                        <td>5군</td>
+                                        <td>경기도-주대2014-023</td>
+                                        <td>이형수, 김종은</td>
+                                        <td>2025-09-07</td>
+                                        <td>법정관리</td>
+                                        <td>정상</td>
+                                        <td>2025-09-07</td>
+                                        <td>19810001</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="noData">등록 또는 조회 데이터가 없습니다.</div>
+
+                            <div class="dataTables_paginate paging_simple_numbers" id="boardTable_paginate">
+                                <a class="paginate_button previous disabled" aria-controls="boardTable" data-dt-idx="0" tabindex="-1" id="boardTable_previous">Previous</a>
+                                <span><a class="paginate_button current" aria-controls="boardTable" data-dt-idx="1" tabindex="0">1</a></span>
+                                <a class="paginate_button next disabled" aria-controls="boardTable" data-dt-idx="2" tabindex="-1" id="boardTable_next">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-box">
+                    <button class="btn-2 close-btn-trigger close-btn-bottom" onclick="closeModal()">닫기</button>
+                    <button class="btn-3">추가</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 모달 레이어 팝업 -->
+
+        <!-- 모달 레이어 팝업: 테스트 -->
+        <div id="test" class="modal">
+            <div class="modal-content-wrap">
+                <!-- 닫기 버튼 -->
+                <span class="close-button">&times;</span>
+
+                <h2>Test</h2>
+
+                test
+            </div>
+        </div>
+        <!-- e: 모달 레이어 팝업 -->
+
+        <script>
+            /**
+             * 범용 모달 제어 스크립트
+             */
+            document.addEventListener("DOMContentLoaded", function () {
+                // 1. 모달 열기 로직
+                const openButtons = document.querySelectorAll(".open-modal-btn");
+                openButtons.forEach((btn) => {
+                    btn.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute("data-target");
+                        const modal = document.querySelector(targetId);
+                        if (modal) {
+                            modal.classList.add("is-visible");
+                            document.body.style.overflow = "hidden"; // 배경 스크롤 방지
+                        }
+                    });
+                });
+
+                // 2. 모달 닫기 로직 (상단 X 버튼 및 하단 닫기 버튼 공통)
+                // 이벤트 위임을 사용하여 동적으로 생성된 요소에도 대응 가능하게 설정
+                document.addEventListener("click", function (e) {
+                    // 닫기 버튼(.close-button) 또는 닫기 트리거(.close-btn-trigger) 클릭 시
+                    if (e.target.classList.contains("close-button") || e.target.classList.contains("close-btn-trigger")) {
+                        const modal = e.target.closest(".modal");
+                        if (modal) {
+                            closeModal(modal);
+                        }
+                    }
+
+                    // 배경 영역 클릭 시 닫기
+                    if (e.target.classList.contains("modal")) {
+                        closeModal(e.target);
+                    }
+                });
+
+                // 3. ESC 키로 닫기
+                document.addEventListener("keydown", function (e) {
+                    if (e.key === "Escape") {
+                        const visibleModal = document.querySelector(".modal.is-visible");
+                        if (visibleModal) {
+                            closeModal(visibleModal);
+                        }
+                    }
+                });
+
+                // 닫기 공통 함수
+                function closeModal(modalElement) {
+                    modalElement.classList.remove("is-visible");
+
+                    // 화면에 열려있는 다른 모달이 없는 경우에만 스크롤 복원
+                    const remainVisible = document.querySelectorAll(".modal.is-visible").length;
+                    if (remainVisible === 0) {
+                        document.body.style.overflow = "";
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

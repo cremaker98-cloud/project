@@ -344,6 +344,7 @@ input[name="tabs"] {
     min-height: 32px;
     border-radius: 3px;
     padding: 0 10px;
+    vertical-align: middle;
 }
 .btn-intable1 {
     background-color: #267bd6;
@@ -433,8 +434,14 @@ button {
 .mgt30 {
     margin-top: 30px;
 }
+.mgrSmall {
+    margin-right: 10px;
+}
 .mglSmall {
     margin-left: 3px;
+}
+.mglMed {
+    margin-left: 15px;
 }
 
 /*** 기존 css(common.css) 속성 수정 ***/
@@ -448,7 +455,8 @@ table.dataTable thead th,
 table.dataTable thead td {
     padding: 10px 5px;
 }
-table.dataTable tbody td.totalCount {
+table.dataTable tbody td.totalCount,
+table.dataTable tbody tr.totalCount td {
     font-weight: 500;
     color: #a82a2a;
     background-color: #fff0d9;

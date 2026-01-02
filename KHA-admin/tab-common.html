@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Bootstrap --->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
+        <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+
+        <link rel="stylesheet" href="assets/css/datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/select.datatables.min.css" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <link rel="stylesheet" href="assets/css/kha-prc.css" />
+
+        <title>업무전산-Tab</title>
+    </head>
+
+    <body>
+        <main class="prcContainer">
+            <!--// <h3>:참고용 타이틀,<br/>,<hr />(class 없는 순수 hr)은 단순 경계를 나누기 위한 코드입니다. 필요한 영역만 사용!! -->
+
+            <!---------------- s: 실사용 영역 ---------------->
+
+            <h3>Tab 사용 가이드</h3>
+            <br />
+
+            <!-- s: 입회비-->
+            <div class="prc-wrapper">
+                <div class="tab-container">
+                    <!-- s: Tab-menu -->
+                    <input type="radio" name="tabs" id="tab1" checked />
+                    <input type="radio" name="tabs" id="tab2" />
+                    <input type="radio" name="tabs" id="tab3" />
+                    <input type="radio" name="tabs" id="tab4" />
+
+                    <div class="tab-menu">
+                        <label for="tab1">Tab1</label>
+                        <label for="tab2">Tab2</label>
+                        <label for="tab3">Tab3</label>
+                        <label for="tab4">Tab4</label>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- s: tab1-content -->
+                        <div id="content1" class="item">
+                            <div>
+                                Tab 기능은 확인 결과 페이지당 한개씩만 존재하기때문에, 안정성을 위해 순수 css로만 작업.<br />
+                                갯수대로 각 id/for 형식만 맞추면 최대 10개까지 자유롭게 사용 가능.
+                            </div>
+                        </div>
+                        <!-- e: tab1-content -->
+
+                        <!-- s: tab1-content -->
+                        <div id="content2" class="item">Tab2</div>
+                        <!-- e: tab1-content -->
+
+                        <!-- s: tab1-content -->
+                        <div id="content3" class="item">Tab3</div>
+                        <!-- e: tab1-content -->
+
+                        <!-- s: tab1-content -->
+                        <div id="content4" class="item">Tab4</div>
+                        <!-- e: tab1-content -->
+                    </div>
+                </div>
+            </div>
+            <!-- e: 입회비-->
+
+            <!---------------- e: 실사용 영역 ---------------->
+        </main>
+    </body>
+</html>
