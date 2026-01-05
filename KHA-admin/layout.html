@@ -29,6 +29,125 @@
             </div>
             <!--e: Header-->
 
+            <!-- 1. HTML 구조 (body 태그 바로 아래에 위치 추천) -->
+            <div id="global-loader" class="loader-overlay">
+                <div class="spinner"></div>
+                <div class="loading-text">잠시만 기다려주세요...</div>
+            </div>
+
+            <!-- 2. CSS 스타일 -->
+            <style>
+                :root {
+                    /* 디자인 토큰: 이곳의 값만 수정하면 디자인이 변경됩니다 */
+                    --loader-bg: #ffffff; /* 배경색 */
+                    --spinner-primary: #2563eb; /* 스피너 메인 색상 */
+                    --spinner-secondary: #e2e8f0; /* 스피너 배경 색상 */
+                    --spinner-size: 50px; /* 크기 */
+                    --spinner-thickness: 5px; /* 두께 */
+                    --loader-fade-speed: 0.5s; /* 사라질 때 애니메이션 속도 */
+                }
+
+                /* 전체 화면 덮개 */
+                .loader-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--loader-bg);
+                    z-index: 9999; /* 최상위 레벨 */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                    transition: opacity var(--loader-fade-speed), visibility var(--loader-fade-speed);
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                /* 숨김 처리 클래스 */
+                .loader-overlay.is-hidden {
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                }
+
+                /* 스피너 애니메이션 */
+                .spinner {
+                    width: var(--spinner-size);
+                    height: var(--spinner-size);
+                    border: var(--spinner-thickness) solid var(--spinner-secondary);
+                    border-top-color: var(--spinner-primary);
+                    border-radius: 50%;
+                    animation: spin 0.8s linear infinite;
+                }
+
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                /* 로딩 텍스트 애니메이션 */
+                .loading-text {
+                    color: #64748b;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    animation: pulse 1.5s ease-in-out infinite;
+                }
+
+                @keyframes pulse {
+                    0%,
+                    100% {
+                        opacity: 1;
+                    }
+                    50% {
+                        opacity: 0.5;
+                    }
+                }
+            </style>
+
+            <!-- 3. JS 로직 -->
+            <script>
+                class PageLoader {
+                    constructor(options = {}) {
+                        this.loader = document.querySelector(options.selector || "#global-loader");
+                        this.minDisplayTime = options.minDisplayTime || 500; // 최소 노출 시간 (ms)
+                        this.startTime = Date.now();
+
+                        if (this.loader) {
+                            this.init();
+                        }
+                    }
+
+                    init() {
+                        // 페이지 리소스 로드 완료 감지
+                        window.addEventListener("load", () => this.handleLoadComplete());
+                    }
+
+                    handleLoadComplete() {
+                        const elapsedTime = Date.now() - this.startTime;
+                        const remainingTime = Math.max(0, this.minDisplayTime - elapsedTime);
+
+                        // 최소 노출 시간 보장 후 숨김
+                        setTimeout(() => this.hide(), remainingTime);
+                    }
+
+                    hide() {
+                        if (this.loader) {
+                            this.loader.classList.add("is-hidden");
+                        }
+                    }
+                }
+
+                // 실행 코드
+                new PageLoader({
+                    selector: "#global-loader",
+                    minDisplayTime: 3800, // 예: 최소 0.8초 동안은 무조건 보여줌 (깜빡임 방지)
+                });
+            </script>
+
             <!--s: Main--
             <main>
                 <!-- s:LNB--
