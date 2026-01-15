@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../assets/css/ol-reset.css" />
+        <link rel="stylesheet" href="../assets/css/ol-style.css" />
+        <title>한국주택협회 인터넷증명발급</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top & Header -->
+            <section class="top">
+                <div data-include-path="../assets/inc/header.html"></div>
+            </section>
+            <!-- //Top & Header -->
+
+            <main>
+                <!-- LNB -->
+                <section class="lnb">
+                    <div data-include-path="../assets/inc/lnb-request.html"></div>
+                    <div data-include-path="../assets/inc/lnb-link.html"></div>
+                </section>
+                <!-- //LNB -->
+
+                <!-- Container -->
+                <section class="container">
+                    <div class="page-title">
+                        <h3>행정처분 사실 확인서</h3>
+                        <div>
+                            <a href="#" class="btn-title"><img src="../assets/img/icon-title-link-3.png" /></a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="content">
+                        <div>
+                            <table class="d-tb-view">
+                                <tr>
+                                    <th>업체명</th>
+                                    <td><input type="text" size="30" disabled /></td>
+                                </tr>
+                                <tr>
+                                    <th>주택건설사업자 등록번호</th>
+                                    <td>
+                                        <input type="text" disabled />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>대표자</th>
+                                    <td><input type="text" disabled /></td>
+                                </tr>
+                                <tr>
+                                    <th>법인등록번호</th>
+                                    <td><input type="text" disabled /></td>
+                                </tr>
+                                <tr>
+                                    <th>소재지</th>
+                                    <td><input type="text" class="wdFull" disabled /></td>
+                                </tr>
+                                <tr>
+                                    <th>발급부수</th>
+                                    <td>
+                                        <select style="width: 120px">
+                                            <option>1</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기준일자</th>
+                                    <td>
+                                        <div class="labelArea">
+                                            <label><input type="radio" name="year" />최근1년간</label>
+                                            <label><input type="radio" name="year" />최근3년간</label>
+                                            <label><input type="radio" name="year" />최근5년간</label>
+                                            <label><input type="radio" name="year" />기타</label>
+                                            <span>( <input type="date" /> ~ <input type="date" /> )</span>
+                                        </div>
+                                        <div class="mgt10 grayColor">
+                                            <ul class="dotType smFont">
+                                                <li>기타 선택 시 달력에서 날짜를 선택해주세요.</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div class="btnArea">
+                                <a href="#" class="btn-ok">작성완료</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Content -->
+                </section>
+                <!-- //Container -->
+            </main>
+
+            <section class="footer">
+                <div data-include-path="../assets/inc/footer.html"></div>
+            </section>
+        </div>
+    </body>
+
+    <script src="../assets/js/ol-include.js"></script>
+</html>

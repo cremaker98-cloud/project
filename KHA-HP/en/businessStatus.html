@@ -8,26 +8,51 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/reset.css" />
         <link rel="stylesheet" href="assets/css/en-kha.css" />
+        <script src="assets/js/en-kha.js"></script>
     </head>
     <body class="sub">
         <div class="en-wrapper">
             <header>
                 <div>
                     <h1>
-                        <a href="main.html"><img src="assets/img/en-logo-b.png" alt="logo" /></a>
+                        <a href="main.html"><img src="assets/img/en-logo-b.png" alt="KHA Logo" /></a>
                     </h1>
+
                     <ul class="en-gnb">
-                        <li><a href="about.html">About KHA</a></li>
+                        <li class="active"><a href="about.html">About KHA</a></li>
                         <li><a href="organization.html">Organization</a></li>
-                        <li class="active"><a href="businessStatus.html">Business Status</a></li>
+                        <li><a href="businessStatus.html">Business Status</a></li>
                         <li><a href="contactUs.html">Contact Us</a></li>
                     </ul>
                     <div class="uMenu">
                         <a href="#">Send Email</a>
-                        <a href="#"><img src="assets/img/icon-lang-b.svg" />KOR</a>
+                        <a href="#"><img src="assets/img/icon-lang-b.svg" alt="lang" />KOR</a>
+                    </div>
+
+                    <button class="mo-menu-btn" type="button" aria-label="Open Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <div class="mo-gnb-wrapper">
+                    <div class="mo-gnb-inner">
+                        <ul>
+                            <li><a href="about.html">About KHA</a></li>
+                            <li><a href="organization.html">Organization</a></li>
+                            <li><a href="businessStatus.html">Business Status</a></li>
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </ul>
+                        <div class="mo-util-link">
+                            <a href="#">Send Email</a>
+                            <a href="#">KOR</a>
+                        </div>
                     </div>
                 </div>
             </header>
+
+            <div class="dim-overlay"></div>
 
             <main>
                 <div class="container">

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../assets/css/ol-reset.css" />
+        <link rel="stylesheet" href="../assets/css/ol-style.css" />
+        <title>한국주택협회 인터넷증명발급</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top & Header -->
+            <section class="top">
+                <div data-include-path="../assets/inc/header.html"></div>
+            </section>
+            <!-- //Top & Header -->
+
+            <main>
+                <!-- LNB -->
+                <section class="lnb">
+                    <div data-include-path="../assets/inc/lnb-customer.html"></div>
+                    <div data-include-path="../assets/inc/lnb-link.html"></div>
+                </section>
+                <!-- //LNB -->
+
+                <!-- Container -->
+                <section class="container">
+                    <div class="page-title">
+                        <h3>자주 묻는 질문</h3>
+                        <div>
+                            <a href="#" class="btn-title"><img src="../assets/img/icon-title-link-3.png" /></a>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="accordion-group" id="modal-faq">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <p class="qmark">여러 대의 프린터 중 다른 프린터로 증명발급 하려는 경우</p>
+                                    <span class="icon"></span>
+                                </button>
+                                <div class="accordion-body">
+                                    <div class="accordion-content">
+                                        <p class="amark">
+                                            <span>인터넷 증명발급 시스템은 사용자 PC의 '기본 프린터'로 증명서를 출력합니다.<br />기본 프린터 변경을 원하실 경우, [시작]버튼 - [제어판] - [프린터]에서 변경할 프린터를 마우스 우클릭하여 "기본 프린터로 설정"을 선택 하십시오.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <p class="qmark">여러 대의 프린터 중 다른 프린터로 증명발급 하려는 경우</p>
+                                    <span class="icon"></span>
+                                </button>
+                                <div class="accordion-body">
+                                    <div class="accordion-content">
+                                        <p class="amark">
+                                            <span>인터넷 증명발급 시스템은 사용자 PC의 '기본 프린터'로 증명서를 출력합니다.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- //Content -->
+                </section>
+                <!-- //Container -->
+            </main>
+
+            <section class="footer">
+                <div data-include-path="../assets/inc/footer.html"></div>
+            </section>
+        </div>
+    </body>
+
+    <script>
+        class Accordion {
+            constructor(selector, options = {}) {
+                // 선택자가 문자열이면 요소를 찾고, 요소 자체면 그대로 사용
+                this.container = typeof selector === "string" ? document.querySelector(selector) : selector;
+
+                // 옵션 기본값: 한 번에 하나만 열기 (true)
+                this.options = { oneAtATime: true, ...options };
+
+                if (this.container) this.init();
+            }
+
+            init() {
+                // 이벤트 위임: 헤더 클릭 시 감지
+                this.container.addEventListener("click", (e) => {
+                    const header = e.target.closest(".accordion-header");
+                    if (!header) return;
+
+                    // 헤더의 부모(.accordion-item)를 찾아 토글
+                    this.toggle(header.parentElement);
+                });
+            }
+
+            toggle(item) {
+                const isActive = item.classList.contains("is-active");
+
+                // '하나만 열기' 옵션이 켜져있고, 현재 아이템을 열려고 할 때
+                if (this.options.oneAtATime && !isActive) {
+                    // 기존에 열려있는 다른 아이템을 닫음
+                    const activeItem = this.container.querySelector(".accordion-item.is-active");
+                    if (activeItem) activeItem.classList.remove("is-active");
+                }
+
+                // 상태 반전 (열기/닫기)
+                item.classList.toggle("is-active");
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            // 2. 아코디언 실행 (특정 ID 지정)
+            // 필요한 곳에 ID를 주고 이렇게 개별 실행하면 됩니다.
+            new Accordion("#modal-faq");
+        });
+    </script>
+    <script src="../assets/js/ol-include.js"></script>
+</html>
