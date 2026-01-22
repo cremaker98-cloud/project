@@ -1,0 +1,24 @@
+# [ 에디터 및 워크스페이스 관련 ]
+# 현재 작업 중인 워크스페이스 파일을 GitHub에 올리지 않으려면 아래 줄을 유지하세요.
+*.code-workspace
+# VS Code의 개인 설정 폴더를 제외합니다.
+.vscode/
+
+# [ 운영체제 임시 파일 ]
+# 윈도우에서 생성되는 미리보기 이미지 캐시 파일
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# 맥(macOS)에서 생성되는 시스템 파일
+.DS_Store
+
+# [ 웹 개발 관련 ]
+# 추후 npm 등을 사용하게 될 경우를 대비해 라이브러리 폴더를 제외합니다.
+node_modules/
+# 로그 파일 및 임시 파일
+*.log
+npm-debug.log*
+
+# [ 보안 관련 ]
+# API 키나 개인적인 설정이 담긴 파일 (예: .env)
+.env
